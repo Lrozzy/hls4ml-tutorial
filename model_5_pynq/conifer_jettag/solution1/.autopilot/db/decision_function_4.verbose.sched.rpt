@@ -1,0 +1,338 @@
+
+
+================================================================
+== Vitis HLS Report for 'decision_function_4'
+================================================================
+* Date:           Thu Jan 23 13:48:17 2025
+
+* Version:        2024.1 (Build 5069499 on May 21 2024)
+* Project:        conifer_jettag
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.645 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        6|        6|  30.000 ns|  30.000 ns|    1|    1|      yes|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 7
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 7
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 7, States = { 1 2 3 4 5 6 7 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.11>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%p_read = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %p_read18" [firmware/BDT.h:86]   --->   Operation 8 'read' 'p_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%p_read_415 = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %p_read17" [firmware/BDT.h:86]   --->   Operation 9 'read' 'p_read_415' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%p_read_416 = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %p_read16" [firmware/BDT.h:86]   --->   Operation 10 'read' 'p_read_416' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%p_read_417 = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %p_read15" [firmware/BDT.h:86]   --->   Operation 11 'read' 'p_read_417' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%p_read_418 = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %p_read14" [firmware/BDT.h:86]   --->   Operation 12 'read' 'p_read_418' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%p_read1321 = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %p_read13" [firmware/BDT.h:86]   --->   Operation 13 'read' 'p_read1321' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%p_read1220 = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %p_read12" [firmware/BDT.h:86]   --->   Operation 14 'read' 'p_read1220' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%p_read1119 = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %p_read11" [firmware/BDT.h:86]   --->   Operation 15 'read' 'p_read1119' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%p_read1018 = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %p_read10" [firmware/BDT.h:86]   --->   Operation 16 'read' 'p_read1018' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%p_read917 = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %p_read9" [firmware/BDT.h:86]   --->   Operation 17 'read' 'p_read917' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%p_read816 = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %p_read8" [firmware/BDT.h:86]   --->   Operation 18 'read' 'p_read816' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%p_read715 = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %p_read7" [firmware/BDT.h:86]   --->   Operation 19 'read' 'p_read715' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%p_read614 = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %p_read6" [firmware/BDT.h:86]   --->   Operation 20 'read' 'p_read614' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%p_read513 = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %p_read5" [firmware/BDT.h:86]   --->   Operation 21 'read' 'p_read513' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%p_read412 = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %p_read4" [firmware/BDT.h:86]   --->   Operation 22 'read' 'p_read412' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%p_read311 = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %p_read3" [firmware/BDT.h:86]   --->   Operation 23 'read' 'p_read311' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%p_read210 = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %p_read2" [firmware/BDT.h:86]   --->   Operation 24 'read' 'p_read210' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%p_read19 = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %p_read1" [firmware/BDT.h:86]   --->   Operation 25 'read' 'p_read19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (2.13ns)   --->   "%icmp_ln86 = icmp_slt  i18 %p_read_416, i18 312" [firmware/BDT.h:86]   --->   Operation 26 'icmp' 'icmp_ln86' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 27 [1/1] (2.13ns)   --->   "%icmp_ln86_105 = icmp_slt  i18 %p_read, i18 520" [firmware/BDT.h:86]   --->   Operation 27 'icmp' 'icmp_ln86_105' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 28 [1/1] (2.13ns)   --->   "%icmp_ln86_106 = icmp_slt  i18 %p_read1119, i18 542" [firmware/BDT.h:86]   --->   Operation 28 'icmp' 'icmp_ln86_106' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 29 [1/1] (2.13ns)   --->   "%icmp_ln86_107 = icmp_slt  i18 %p_read, i18 1" [firmware/BDT.h:86]   --->   Operation 29 'icmp' 'icmp_ln86_107' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 30 [1/1] (2.13ns)   --->   "%icmp_ln86_108 = icmp_slt  i18 %p_read_418, i18 343" [firmware/BDT.h:86]   --->   Operation 30 'icmp' 'icmp_ln86_108' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 31 [1/1] (2.13ns)   --->   "%icmp_ln86_109 = icmp_slt  i18 %p_read1018, i18 967" [firmware/BDT.h:86]   --->   Operation 31 'icmp' 'icmp_ln86_109' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 32 [1/1] (2.13ns)   --->   "%icmp_ln86_110 = icmp_slt  i18 %p_read_415, i18 6779" [firmware/BDT.h:86]   --->   Operation 32 'icmp' 'icmp_ln86_110' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (2.13ns)   --->   "%icmp_ln86_111 = icmp_slt  i18 %p_read_417, i18 119" [firmware/BDT.h:86]   --->   Operation 33 'icmp' 'icmp_ln86_111' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 34 [1/1] (2.13ns)   --->   "%icmp_ln86_112 = icmp_slt  i18 %p_read816, i18 365" [firmware/BDT.h:86]   --->   Operation 34 'icmp' 'icmp_ln86_112' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 35 [1/1] (2.13ns)   --->   "%icmp_ln86_113 = icmp_slt  i18 %p_read412, i18 33" [firmware/BDT.h:86]   --->   Operation 35 'icmp' 'icmp_ln86_113' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 36 [1/1] (2.13ns)   --->   "%icmp_ln86_114 = icmp_slt  i18 %p_read, i18 958" [firmware/BDT.h:86]   --->   Operation 36 'icmp' 'icmp_ln86_114' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 37 [1/1] (2.13ns)   --->   "%icmp_ln86_115 = icmp_slt  i18 %p_read715, i18 92" [firmware/BDT.h:86]   --->   Operation 37 'icmp' 'icmp_ln86_115' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 38 [1/1] (2.13ns)   --->   "%icmp_ln86_116 = icmp_slt  i18 %p_read614, i18 260" [firmware/BDT.h:86]   --->   Operation 38 'icmp' 'icmp_ln86_116' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 39 [1/1] (2.13ns)   --->   "%icmp_ln86_117 = icmp_slt  i18 %p_read917, i18 100300" [firmware/BDT.h:86]   --->   Operation 39 'icmp' 'icmp_ln86_117' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 40 [1/1] (2.13ns)   --->   "%icmp_ln86_118 = icmp_slt  i18 %p_read614, i18 218" [firmware/BDT.h:86]   --->   Operation 40 'icmp' 'icmp_ln86_118' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 41 [1/1] (2.13ns)   --->   "%icmp_ln86_119 = icmp_slt  i18 %p_read1220, i18 37" [firmware/BDT.h:86]   --->   Operation 41 'icmp' 'icmp_ln86_119' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 42 [1/1] (2.13ns)   --->   "%icmp_ln86_120 = icmp_slt  i18 %p_read513, i18 51640" [firmware/BDT.h:86]   --->   Operation 42 'icmp' 'icmp_ln86_120' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 43 [1/1] (2.13ns)   --->   "%icmp_ln86_121 = icmp_slt  i18 %p_read715, i18 156" [firmware/BDT.h:86]   --->   Operation 43 'icmp' 'icmp_ln86_121' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 44 [1/1] (2.13ns)   --->   "%icmp_ln86_122 = icmp_slt  i18 %p_read816, i18 146" [firmware/BDT.h:86]   --->   Operation 44 'icmp' 'icmp_ln86_122' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 45 [1/1] (2.13ns)   --->   "%icmp_ln86_123 = icmp_slt  i18 %p_read412, i18 60" [firmware/BDT.h:86]   --->   Operation 45 'icmp' 'icmp_ln86_123' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 46 [1/1] (2.13ns)   --->   "%icmp_ln86_124 = icmp_slt  i18 %p_read19, i18 250647" [firmware/BDT.h:86]   --->   Operation 46 'icmp' 'icmp_ln86_124' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 47 [1/1] (2.13ns)   --->   "%icmp_ln86_125 = icmp_slt  i18 %p_read_416, i18 314" [firmware/BDT.h:86]   --->   Operation 47 'icmp' 'icmp_ln86_125' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 48 [1/1] (2.13ns)   --->   "%icmp_ln86_126 = icmp_slt  i18 %p_read311, i18 1083" [firmware/BDT.h:86]   --->   Operation 48 'icmp' 'icmp_ln86_126' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 49 [1/1] (2.13ns)   --->   "%icmp_ln86_127 = icmp_slt  i18 %p_read1321, i18 15" [firmware/BDT.h:86]   --->   Operation 49 'icmp' 'icmp_ln86_127' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 50 [1/1] (2.13ns)   --->   "%icmp_ln86_128 = icmp_slt  i18 %p_read210, i18 1397" [firmware/BDT.h:86]   --->   Operation 50 'icmp' 'icmp_ln86_128' <Predicate = true> <Delay = 2.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 51 [1/1] (0.97ns)   --->   "%and_ln102 = and i1 %icmp_ln86_105, i1 %icmp_ln86" [firmware/BDT.h:102]   --->   Operation 51 'and' 'and_ln102' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 2.94>
+ST_2 : Operation 52 [1/1] (0.97ns)   --->   "%xor_ln104 = xor i1 %icmp_ln86, i1 1" [firmware/BDT.h:104]   --->   Operation 52 'xor' 'xor_ln104' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 53 [1/1] (0.00ns) (grouped into LUT with out node and_ln104)   --->   "%xor_ln104_50 = xor i1 %icmp_ln86_105, i1 1" [firmware/BDT.h:104]   --->   Operation 53 'xor' 'xor_ln104_50' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 54 [1/1] (0.97ns) (out node of the LUT)   --->   "%and_ln104 = and i1 %icmp_ln86, i1 %xor_ln104_50" [firmware/BDT.h:104]   --->   Operation 54 'and' 'and_ln104' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 55 [1/1] (0.97ns)   --->   "%and_ln102_100 = and i1 %icmp_ln86_106, i1 %xor_ln104" [firmware/BDT.h:102]   --->   Operation 55 'and' 'and_ln102_100' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 56 [1/1] (0.00ns) (grouped into LUT with out node and_ln104_19)   --->   "%xor_ln104_51 = xor i1 %icmp_ln86_106, i1 1" [firmware/BDT.h:104]   --->   Operation 56 'xor' 'xor_ln104_51' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 57 [1/1] (0.97ns) (out node of the LUT)   --->   "%and_ln104_19 = and i1 %xor_ln104_51, i1 %xor_ln104" [firmware/BDT.h:104]   --->   Operation 57 'and' 'and_ln104_19' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 58 [1/1] (0.97ns)   --->   "%and_ln102_101 = and i1 %icmp_ln86_107, i1 %and_ln102" [firmware/BDT.h:102]   --->   Operation 58 'and' 'and_ln102_101' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 59 [1/1] (0.00ns) (grouped into LUT with out node and_ln104_20)   --->   "%xor_ln104_52 = xor i1 %icmp_ln86_107, i1 1" [firmware/BDT.h:104]   --->   Operation 59 'xor' 'xor_ln104_52' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 60 [1/1] (0.97ns) (out node of the LUT)   --->   "%and_ln104_20 = and i1 %and_ln102, i1 %xor_ln104_52" [firmware/BDT.h:104]   --->   Operation 60 'and' 'and_ln104_20' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 61 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_103)   --->   "%and_ln102_103 = and i1 %icmp_ln86_109, i1 %and_ln102_100" [firmware/BDT.h:102]   --->   Operation 61 'and' 'and_ln102_103' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 62 [1/1] (0.97ns)   --->   "%and_ln102_105 = and i1 %icmp_ln86_111, i1 %and_ln102_101" [firmware/BDT.h:102]   --->   Operation 62 'and' 'and_ln102_105' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 63 [1/1] (0.97ns)   --->   "%and_ln102_106 = and i1 %icmp_ln86_112, i1 %and_ln104_20" [firmware/BDT.h:102]   --->   Operation 63 'and' 'and_ln102_106' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 64 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_103)   --->   "%and_ln102_111 = and i1 %icmp_ln86_117, i1 %and_ln102_105" [firmware/BDT.h:102]   --->   Operation 64 'and' 'and_ln102_111' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 65 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_103)   --->   "%xor_ln117 = xor i1 %and_ln102_103, i1 1" [firmware/BDT.h:117]   --->   Operation 65 'xor' 'xor_ln117' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 66 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_103)   --->   "%zext_ln117 = zext i1 %xor_ln117" [firmware/BDT.h:117]   --->   Operation 66 'zext' 'zext_ln117' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 67 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_103)   --->   "%or_ln117 = or i1 %and_ln102_100, i1 %and_ln102_111" [firmware/BDT.h:117]   --->   Operation 67 'or' 'or_ln117' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 68 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_103)   --->   "%select_ln117 = select i1 %and_ln102_100, i2 %zext_ln117, i2 2" [firmware/BDT.h:117]   --->   Operation 68 'select' 'select_ln117' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 69 [1/1] (0.97ns)   --->   "%or_ln117_99 = or i1 %and_ln102_100, i1 %and_ln102_105" [firmware/BDT.h:117]   --->   Operation 69 'or' 'or_ln117_99' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 70 [1/1] (0.99ns) (out node of the LUT)   --->   "%select_ln117_103 = select i1 %or_ln117, i2 %select_ln117, i2 3" [firmware/BDT.h:117]   --->   Operation 70 'select' 'select_ln117_103' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 71 [1/1] (0.97ns)   --->   "%or_ln117_101 = or i1 %and_ln102_100, i1 %and_ln102_101" [firmware/BDT.h:117]   --->   Operation 71 'or' 'or_ln117_101' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 72 [1/1] (0.97ns)   --->   "%or_ln117_105 = or i1 %and_ln102_100, i1 %and_ln102" [firmware/BDT.h:117]   --->   Operation 72 'or' 'or_ln117_105' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 73 [1/1] (0.97ns)   --->   "%or_ln117_113 = or i1 %and_ln102_100, i1 %icmp_ln86" [firmware/BDT.h:117]   --->   Operation 73 'or' 'or_ln117_113' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 3.02>
+ST_3 : Operation 74 [1/1] (0.97ns)   --->   "%and_ln102_102 = and i1 %icmp_ln86_108, i1 %and_ln104" [firmware/BDT.h:102]   --->   Operation 74 'and' 'and_ln102_102' <Predicate = (or_ln117_113)> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 75 [1/1] (0.00ns) (grouped into LUT with out node and_ln104_21)   --->   "%xor_ln104_53 = xor i1 %icmp_ln86_108, i1 1" [firmware/BDT.h:104]   --->   Operation 75 'xor' 'xor_ln104_53' <Predicate = (or_ln117_113)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 76 [1/1] (0.97ns) (out node of the LUT)   --->   "%and_ln104_21 = and i1 %and_ln104, i1 %xor_ln104_53" [firmware/BDT.h:104]   --->   Operation 76 'and' 'and_ln104_21' <Predicate = (or_ln117_113)> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 77 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_105)   --->   "%xor_ln104_55 = xor i1 %icmp_ln86_111, i1 1" [firmware/BDT.h:104]   --->   Operation 77 'xor' 'xor_ln104_55' <Predicate = (or_ln117_101 & or_ln117_105 & or_ln117_113)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 78 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_110)   --->   "%xor_ln104_56 = xor i1 %icmp_ln86_112, i1 1" [firmware/BDT.h:104]   --->   Operation 78 'xor' 'xor_ln104_56' <Predicate = (or_ln117_105 & or_ln117_113)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 79 [1/1] (0.97ns)   --->   "%and_ln102_107 = and i1 %icmp_ln86_113, i1 %and_ln102_102" [firmware/BDT.h:102]   --->   Operation 79 'and' 'and_ln102_107' <Predicate = (or_ln117_113)> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 80 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_105)   --->   "%and_ln102_123 = and i1 %icmp_ln86_118, i1 %xor_ln104_55" [firmware/BDT.h:102]   --->   Operation 80 'and' 'and_ln102_123' <Predicate = (or_ln117_101 & or_ln117_105 & or_ln117_113)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 81 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_105)   --->   "%and_ln102_112 = and i1 %and_ln102_123, i1 %and_ln102_101" [firmware/BDT.h:102]   --->   Operation 81 'and' 'and_ln102_112' <Predicate = (or_ln117_101 & or_ln117_105 & or_ln117_113)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 82 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_108)   --->   "%and_ln102_113 = and i1 %icmp_ln86_119, i1 %and_ln102_106" [firmware/BDT.h:102]   --->   Operation 82 'and' 'and_ln102_113' <Predicate = (or_ln117_105 & or_ln117_113)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 83 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_110)   --->   "%and_ln102_124 = and i1 %icmp_ln86_120, i1 %xor_ln104_56" [firmware/BDT.h:102]   --->   Operation 83 'and' 'and_ln102_124' <Predicate = (or_ln117_105 & or_ln117_113)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 84 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_110)   --->   "%and_ln102_114 = and i1 %and_ln102_124, i1 %and_ln104_20" [firmware/BDT.h:102]   --->   Operation 84 'and' 'and_ln102_114' <Predicate = (or_ln117_105 & or_ln117_113)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 85 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_105)   --->   "%zext_ln117_9 = zext i2 %select_ln117_103" [firmware/BDT.h:117]   --->   Operation 85 'zext' 'zext_ln117_9' <Predicate = (or_ln117_99 & or_ln117_101 & or_ln117_105 & or_ln117_113)> <Delay = 0.00>
+ST_3 : Operation 86 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_105)   --->   "%or_ln117_100 = or i1 %or_ln117_99, i1 %and_ln102_112" [firmware/BDT.h:117]   --->   Operation 86 'or' 'or_ln117_100' <Predicate = (or_ln117_101 & or_ln117_105 & or_ln117_113)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 87 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_105)   --->   "%select_ln117_104 = select i1 %or_ln117_99, i3 %zext_ln117_9, i3 4" [firmware/BDT.h:117]   --->   Operation 87 'select' 'select_ln117_104' <Predicate = (or_ln117_101 & or_ln117_105 & or_ln117_113)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 88 [1/1] (0.98ns) (out node of the LUT)   --->   "%select_ln117_105 = select i1 %or_ln117_100, i3 %select_ln117_104, i3 5" [firmware/BDT.h:117]   --->   Operation 88 'select' 'select_ln117_105' <Predicate = (or_ln117_101 & or_ln117_105 & or_ln117_113)> <Delay = 0.98> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 89 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_108)   --->   "%or_ln117_102 = or i1 %or_ln117_101, i1 %and_ln102_113" [firmware/BDT.h:117]   --->   Operation 89 'or' 'or_ln117_102' <Predicate = (or_ln117_105 & or_ln117_113)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 90 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_108)   --->   "%select_ln117_106 = select i1 %or_ln117_101, i3 %select_ln117_105, i3 6" [firmware/BDT.h:117]   --->   Operation 90 'select' 'select_ln117_106' <Predicate = (or_ln117_105 & or_ln117_113)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 91 [1/1] (0.97ns)   --->   "%or_ln117_103 = or i1 %or_ln117_101, i1 %and_ln102_106" [firmware/BDT.h:117]   --->   Operation 91 'or' 'or_ln117_103' <Predicate = (or_ln117_105 & or_ln117_113)> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 92 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_108)   --->   "%select_ln117_107 = select i1 %or_ln117_102, i3 %select_ln117_106, i3 7" [firmware/BDT.h:117]   --->   Operation 92 'select' 'select_ln117_107' <Predicate = (or_ln117_105 & or_ln117_113)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 93 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_108)   --->   "%zext_ln117_10 = zext i3 %select_ln117_107" [firmware/BDT.h:117]   --->   Operation 93 'zext' 'zext_ln117_10' <Predicate = (or_ln117_105 & or_ln117_113)> <Delay = 0.00>
+ST_3 : Operation 94 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_110)   --->   "%or_ln117_104 = or i1 %or_ln117_103, i1 %and_ln102_114" [firmware/BDT.h:117]   --->   Operation 94 'or' 'or_ln117_104' <Predicate = (or_ln117_105 & or_ln117_113)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 95 [1/1] (1.02ns) (out node of the LUT)   --->   "%select_ln117_108 = select i1 %or_ln117_103, i4 %zext_ln117_10, i4 8" [firmware/BDT.h:117]   --->   Operation 95 'select' 'select_ln117_108' <Predicate = (or_ln117_105 & or_ln117_113)> <Delay = 1.02> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 96 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_110)   --->   "%select_ln117_109 = select i1 %or_ln117_104, i4 %select_ln117_108, i4 9" [firmware/BDT.h:117]   --->   Operation 96 'select' 'select_ln117_109' <Predicate = (or_ln117_105 & or_ln117_113)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 97 [1/1] (1.02ns) (out node of the LUT)   --->   "%select_ln117_110 = select i1 %or_ln117_105, i4 %select_ln117_109, i4 10" [firmware/BDT.h:117]   --->   Operation 97 'select' 'select_ln117_110' <Predicate = (or_ln117_113)> <Delay = 1.02> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 98 [1/1] (0.97ns)   --->   "%or_ln117_107 = or i1 %or_ln117_105, i1 %and_ln102_107" [firmware/BDT.h:117]   --->   Operation 98 'or' 'or_ln117_107' <Predicate = (or_ln117_113)> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 3.26>
+ST_4 : Operation 99 [1/1] (0.97ns)   --->   "%and_ln102_104 = and i1 %icmp_ln86_110, i1 %and_ln104_19" [firmware/BDT.h:102]   --->   Operation 99 'and' 'and_ln102_104' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 100 [1/1] (0.00ns) (grouped into LUT with out node and_ln104_22)   --->   "%xor_ln104_54 = xor i1 %icmp_ln86_110, i1 1" [firmware/BDT.h:104]   --->   Operation 100 'xor' 'xor_ln104_54' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 101 [1/1] (0.97ns) (out node of the LUT)   --->   "%and_ln104_22 = and i1 %and_ln104_19, i1 %xor_ln104_54" [firmware/BDT.h:104]   --->   Operation 101 'and' 'and_ln104_22' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 102 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_114)   --->   "%xor_ln104_57 = xor i1 %icmp_ln86_113, i1 1" [firmware/BDT.h:104]   --->   Operation 102 'xor' 'xor_ln104_57' <Predicate = (or_ln117_113)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 103 [1/1] (0.97ns)   --->   "%and_ln102_108 = and i1 %icmp_ln86_114, i1 %and_ln104_21" [firmware/BDT.h:102]   --->   Operation 103 'and' 'and_ln102_108' <Predicate = (or_ln117_113)> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 104 [1/1] (0.97ns)   --->   "%and_ln102_109 = and i1 %icmp_ln86_115, i1 %and_ln102_104" [firmware/BDT.h:102]   --->   Operation 104 'and' 'and_ln102_109' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 105 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_112)   --->   "%and_ln102_115 = and i1 %icmp_ln86_121, i1 %and_ln102_107" [firmware/BDT.h:102]   --->   Operation 105 'and' 'and_ln102_115' <Predicate = (or_ln117_107 & or_ln117_113)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 106 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_114)   --->   "%and_ln102_125 = and i1 %icmp_ln86_122, i1 %xor_ln104_57" [firmware/BDT.h:102]   --->   Operation 106 'and' 'and_ln102_125' <Predicate = (or_ln117_113)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 107 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_114)   --->   "%and_ln102_116 = and i1 %and_ln102_125, i1 %and_ln102_102" [firmware/BDT.h:102]   --->   Operation 107 'and' 'and_ln102_116' <Predicate = (or_ln117_113)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 108 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_116)   --->   "%and_ln102_117 = and i1 %icmp_ln86_123, i1 %and_ln102_108" [firmware/BDT.h:102]   --->   Operation 108 'and' 'and_ln102_117' <Predicate = (or_ln117_113)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 109 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_112)   --->   "%or_ln117_106 = or i1 %or_ln117_105, i1 %and_ln102_115" [firmware/BDT.h:117]   --->   Operation 109 'or' 'or_ln117_106' <Predicate = (or_ln117_107 & or_ln117_113)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 110 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_112)   --->   "%select_ln117_111 = select i1 %or_ln117_106, i4 %select_ln117_110, i4 11" [firmware/BDT.h:117]   --->   Operation 110 'select' 'select_ln117_111' <Predicate = (or_ln117_107 & or_ln117_113)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 111 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_114)   --->   "%or_ln117_108 = or i1 %or_ln117_107, i1 %and_ln102_116" [firmware/BDT.h:117]   --->   Operation 111 'or' 'or_ln117_108' <Predicate = (or_ln117_113)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 112 [1/1] (1.02ns) (out node of the LUT)   --->   "%select_ln117_112 = select i1 %or_ln117_107, i4 %select_ln117_111, i4 12" [firmware/BDT.h:117]   --->   Operation 112 'select' 'select_ln117_112' <Predicate = (or_ln117_113)> <Delay = 1.02> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 113 [1/1] (0.97ns)   --->   "%or_ln117_109 = or i1 %or_ln117_105, i1 %and_ln102_102" [firmware/BDT.h:117]   --->   Operation 113 'or' 'or_ln117_109' <Predicate = (or_ln117_113)> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 114 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_114)   --->   "%select_ln117_113 = select i1 %or_ln117_108, i4 %select_ln117_112, i4 13" [firmware/BDT.h:117]   --->   Operation 114 'select' 'select_ln117_113' <Predicate = (or_ln117_113)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 115 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_116)   --->   "%or_ln117_110 = or i1 %or_ln117_109, i1 %and_ln102_117" [firmware/BDT.h:117]   --->   Operation 115 'or' 'or_ln117_110' <Predicate = (or_ln117_113)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 116 [1/1] (1.02ns) (out node of the LUT)   --->   "%select_ln117_114 = select i1 %or_ln117_109, i4 %select_ln117_113, i4 14" [firmware/BDT.h:117]   --->   Operation 116 'select' 'select_ln117_114' <Predicate = (or_ln117_113)> <Delay = 1.02> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 117 [1/1] (0.97ns)   --->   "%or_ln117_111 = or i1 %or_ln117_109, i1 %and_ln102_108" [firmware/BDT.h:117]   --->   Operation 117 'or' 'or_ln117_111' <Predicate = (or_ln117_113)> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 118 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_116)   --->   "%select_ln117_115 = select i1 %or_ln117_110, i4 %select_ln117_114, i4 15" [firmware/BDT.h:117]   --->   Operation 118 'select' 'select_ln117_115' <Predicate = (or_ln117_113)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 119 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_116)   --->   "%zext_ln117_11 = zext i4 %select_ln117_115" [firmware/BDT.h:117]   --->   Operation 119 'zext' 'zext_ln117_11' <Predicate = (or_ln117_113)> <Delay = 0.00>
+ST_4 : Operation 120 [1/1] (1.21ns) (out node of the LUT)   --->   "%select_ln117_116 = select i1 %or_ln117_111, i5 %zext_ln117_11, i5 16" [firmware/BDT.h:117]   --->   Operation 120 'select' 'select_ln117_116' <Predicate = (or_ln117_113)> <Delay = 1.21> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 3.64>
+ST_5 : Operation 121 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_118)   --->   "%xor_ln104_58 = xor i1 %icmp_ln86_114, i1 1" [firmware/BDT.h:104]   --->   Operation 121 'xor' 'xor_ln104_58' <Predicate = (or_ln117_113)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 122 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_122)   --->   "%xor_ln104_59 = xor i1 %icmp_ln86_115, i1 1" [firmware/BDT.h:104]   --->   Operation 122 'xor' 'xor_ln104_59' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 123 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_118)   --->   "%and_ln102_126 = and i1 %icmp_ln86_124, i1 %xor_ln104_58" [firmware/BDT.h:102]   --->   Operation 123 'and' 'and_ln102_126' <Predicate = (or_ln117_113)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 124 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_118)   --->   "%and_ln102_118 = and i1 %and_ln102_126, i1 %and_ln104_21" [firmware/BDT.h:102]   --->   Operation 124 'and' 'and_ln102_118' <Predicate = (or_ln117_113)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 125 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_120)   --->   "%and_ln102_119 = and i1 %icmp_ln86_125, i1 %and_ln102_109" [firmware/BDT.h:102]   --->   Operation 125 'and' 'and_ln102_119' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 126 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_122)   --->   "%and_ln102_127 = and i1 %icmp_ln86_126, i1 %xor_ln104_59" [firmware/BDT.h:102]   --->   Operation 126 'and' 'and_ln102_127' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 127 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_122)   --->   "%and_ln102_120 = and i1 %and_ln102_127, i1 %and_ln102_104" [firmware/BDT.h:102]   --->   Operation 127 'and' 'and_ln102_120' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 128 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_118)   --->   "%or_ln117_112 = or i1 %or_ln117_111, i1 %and_ln102_118" [firmware/BDT.h:117]   --->   Operation 128 'or' 'or_ln117_112' <Predicate = (or_ln117_113)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 129 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_118)   --->   "%select_ln117_117 = select i1 %or_ln117_112, i5 %select_ln117_116, i5 17" [firmware/BDT.h:117]   --->   Operation 129 'select' 'select_ln117_117' <Predicate = (or_ln117_113)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 130 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_120)   --->   "%or_ln117_114 = or i1 %or_ln117_113, i1 %and_ln102_119" [firmware/BDT.h:117]   --->   Operation 130 'or' 'or_ln117_114' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 131 [1/1] (1.21ns) (out node of the LUT)   --->   "%select_ln117_118 = select i1 %or_ln117_113, i5 %select_ln117_117, i5 18" [firmware/BDT.h:117]   --->   Operation 131 'select' 'select_ln117_118' <Predicate = true> <Delay = 1.21> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 132 [1/1] (0.97ns)   --->   "%or_ln117_115 = or i1 %or_ln117_113, i1 %and_ln102_109" [firmware/BDT.h:117]   --->   Operation 132 'or' 'or_ln117_115' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 133 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_120)   --->   "%select_ln117_119 = select i1 %or_ln117_114, i5 %select_ln117_118, i5 19" [firmware/BDT.h:117]   --->   Operation 133 'select' 'select_ln117_119' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 134 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_122)   --->   "%or_ln117_116 = or i1 %or_ln117_115, i1 %and_ln102_120" [firmware/BDT.h:117]   --->   Operation 134 'or' 'or_ln117_116' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 135 [1/1] (1.21ns) (out node of the LUT)   --->   "%select_ln117_120 = select i1 %or_ln117_115, i5 %select_ln117_119, i5 20" [firmware/BDT.h:117]   --->   Operation 135 'select' 'select_ln117_120' <Predicate = true> <Delay = 1.21> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 136 [1/1] (0.97ns)   --->   "%or_ln117_117 = or i1 %or_ln117_113, i1 %and_ln102_104" [firmware/BDT.h:117]   --->   Operation 136 'or' 'or_ln117_117' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 137 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_122)   --->   "%select_ln117_121 = select i1 %or_ln117_116, i5 %select_ln117_120, i5 21" [firmware/BDT.h:117]   --->   Operation 137 'select' 'select_ln117_121' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 138 [1/1] (1.21ns) (out node of the LUT)   --->   "%select_ln117_122 = select i1 %or_ln117_117, i5 %select_ln117_121, i5 22" [firmware/BDT.h:117]   --->   Operation 138 'select' 'select_ln117_122' <Predicate = true> <Delay = 1.21> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 3.17>
+ST_6 : Operation 139 [1/1] (0.97ns)   --->   "%and_ln102_110 = and i1 %icmp_ln86_116, i1 %and_ln104_22" [firmware/BDT.h:102]   --->   Operation 139 'and' 'and_ln102_110' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 140 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_124)   --->   "%and_ln102_121 = and i1 %icmp_ln86_127, i1 %and_ln102_110" [firmware/BDT.h:102]   --->   Operation 140 'and' 'and_ln102_121' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 141 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_124)   --->   "%or_ln117_118 = or i1 %or_ln117_117, i1 %and_ln102_121" [firmware/BDT.h:117]   --->   Operation 141 'or' 'or_ln117_118' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 142 [1/1] (0.97ns)   --->   "%or_ln117_119 = or i1 %or_ln117_117, i1 %and_ln102_110" [firmware/BDT.h:117]   --->   Operation 142 'or' 'or_ln117_119' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 143 [1/1] (0.00ns) (grouped into LUT with out node select_ln117_124)   --->   "%select_ln117_123 = select i1 %or_ln117_118, i5 %select_ln117_122, i5 23" [firmware/BDT.h:117]   --->   Operation 143 'select' 'select_ln117_123' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 144 [1/1] (1.21ns) (out node of the LUT)   --->   "%select_ln117_124 = select i1 %or_ln117_119, i5 %select_ln117_123, i5 24" [firmware/BDT.h:117]   --->   Operation 144 'select' 'select_ln117_124' <Predicate = true> <Delay = 1.21> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 3.20>
+ST_7 : Operation 145 [1/1] (0.00ns)   --->   "%specpipeline_ln86 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_13" [firmware/BDT.h:86]   --->   Operation 145 'specpipeline' 'specpipeline_ln86' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 146 [1/1] (0.00ns) (grouped into LUT with out node agg_result)   --->   "%xor_ln104_60 = xor i1 %icmp_ln86_116, i1 1" [firmware/BDT.h:104]   --->   Operation 146 'xor' 'xor_ln104_60' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 147 [1/1] (0.00ns) (grouped into LUT with out node agg_result)   --->   "%and_ln102_128 = and i1 %icmp_ln86_128, i1 %xor_ln104_60" [firmware/BDT.h:102]   --->   Operation 147 'and' 'and_ln102_128' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 148 [1/1] (0.00ns) (grouped into LUT with out node agg_result)   --->   "%and_ln102_122 = and i1 %and_ln102_128, i1 %and_ln104_22" [firmware/BDT.h:102]   --->   Operation 148 'and' 'and_ln102_122' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 149 [1/1] (0.00ns) (grouped into LUT with out node agg_result)   --->   "%or_ln117_120 = or i1 %or_ln117_119, i1 %and_ln102_122" [firmware/BDT.h:117]   --->   Operation 149 'or' 'or_ln117_120' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 150 [1/1] (0.00ns) (grouped into LUT with out node agg_result)   --->   "%select_ln117_125 = select i1 %or_ln117_120, i5 %select_ln117_124, i5 25" [firmware/BDT.h:117]   --->   Operation 150 'select' 'select_ln117_125' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 151 [1/1] (3.20ns) (out node of the LUT)   --->   "%agg_result = sparsemux i12 @_ssdm_op_SparseMux.ap_auto.26i12.i12.i5, i5 0, i12 1789, i5 1, i12 509, i5 2, i12 7, i5 3, i12 3727, i5 4, i12 1786, i5 5, i12 320, i5 6, i12 4062, i5 7, i12 338, i5 8, i12 121, i5 9, i12 3942, i5 10, i12 3, i5 11, i12 465, i5 12, i12 3798, i5 13, i12 114, i5 14, i12 2874, i5 15, i12 323, i5 16, i12 3621, i5 17, i12 295, i5 18, i12 709, i5 19, i12 3976, i5 20, i12 3766, i5 21, i12 2361, i5 22, i12 503, i5 23, i12 3832, i5 24, i12 112, i5 25, i12 3193, i12 0, i5 %select_ln117_125" [firmware/BDT.h:118]   --->   Operation 151 'sparsemux' 'agg_result' <Predicate = true> <Delay = 3.20> <CoreInst = "SparseMux">   --->   Core 132 'SparseMux' <Latency = 0> <II = 1> <Delay = 3.20> <FuncUnit> <Opcode : 'sparsemux'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 152 [1/1] (0.00ns)   --->   "%ret_ln122 = ret i12 %agg_result" [firmware/BDT.h:122]   --->   Operation 152 'ret' 'ret_ln122' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5.000ns, clock uncertainty: 1.350ns.
+
+ <State 1>: 3.114ns
+The critical path consists of the following:
+	wire read operation ('p_read', firmware/BDT.h:86) on port 'p_read18' (firmware/BDT.h:86) [20]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln86_105', firmware/BDT.h:86) [39]  (2.136 ns)
+	'and' operation 1 bit ('and_ln102', firmware/BDT.h:102) [64]  (0.978 ns)
+
+ <State 2>: 2.949ns
+The critical path consists of the following:
+	'xor' operation 1 bit ('xor_ln104', firmware/BDT.h:104) [63]  (0.978 ns)
+	'and' operation 1 bit ('and_ln102_100', firmware/BDT.h:102) [67]  (0.978 ns)
+	'or' operation 1 bit ('or_ln117', firmware/BDT.h:117) [112]  (0.000 ns)
+	'select' operation 2 bit ('select_ln117_103', firmware/BDT.h:117) [115]  (0.993 ns)
+
+ <State 3>: 3.028ns
+The critical path consists of the following:
+	'xor' operation 1 bit ('xor_ln104_55', firmware/BDT.h:104) [81]  (0.000 ns)
+	'and' operation 1 bit ('and_ln102_123', firmware/BDT.h:102) [93]  (0.000 ns)
+	'and' operation 1 bit ('and_ln102_112', firmware/BDT.h:102) [94]  (0.000 ns)
+	'or' operation 1 bit ('or_ln117_100', firmware/BDT.h:117) [117]  (0.000 ns)
+	'select' operation 3 bit ('select_ln117_105', firmware/BDT.h:117) [120]  (0.980 ns)
+	'select' operation 3 bit ('select_ln117_106', firmware/BDT.h:117) [122]  (0.000 ns)
+	'select' operation 3 bit ('select_ln117_107', firmware/BDT.h:117) [124]  (0.000 ns)
+	'select' operation 4 bit ('select_ln117_108', firmware/BDT.h:117) [127]  (1.024 ns)
+	'select' operation 4 bit ('select_ln117_109', firmware/BDT.h:117) [129]  (0.000 ns)
+	'select' operation 4 bit ('select_ln117_110', firmware/BDT.h:117) [131]  (1.024 ns)
+
+ <State 4>: 3.263ns
+The critical path consists of the following:
+	'and' operation 1 bit ('and_ln102_115', firmware/BDT.h:102) [98]  (0.000 ns)
+	'or' operation 1 bit ('or_ln117_106', firmware/BDT.h:117) [130]  (0.000 ns)
+	'select' operation 4 bit ('select_ln117_111', firmware/BDT.h:117) [133]  (0.000 ns)
+	'select' operation 4 bit ('select_ln117_112', firmware/BDT.h:117) [135]  (1.024 ns)
+	'select' operation 4 bit ('select_ln117_113', firmware/BDT.h:117) [137]  (0.000 ns)
+	'select' operation 4 bit ('select_ln117_114', firmware/BDT.h:117) [139]  (1.024 ns)
+	'select' operation 4 bit ('select_ln117_115', firmware/BDT.h:117) [141]  (0.000 ns)
+	'select' operation 5 bit ('select_ln117_116', firmware/BDT.h:117) [144]  (1.215 ns)
+
+ <State 5>: 3.645ns
+The critical path consists of the following:
+	'xor' operation 1 bit ('xor_ln104_58', firmware/BDT.h:104) [87]  (0.000 ns)
+	'and' operation 1 bit ('and_ln102_126', firmware/BDT.h:102) [102]  (0.000 ns)
+	'and' operation 1 bit ('and_ln102_118', firmware/BDT.h:102) [103]  (0.000 ns)
+	'or' operation 1 bit ('or_ln117_112', firmware/BDT.h:117) [143]  (0.000 ns)
+	'select' operation 5 bit ('select_ln117_117', firmware/BDT.h:117) [146]  (0.000 ns)
+	'select' operation 5 bit ('select_ln117_118', firmware/BDT.h:117) [148]  (1.215 ns)
+	'select' operation 5 bit ('select_ln117_119', firmware/BDT.h:117) [150]  (0.000 ns)
+	'select' operation 5 bit ('select_ln117_120', firmware/BDT.h:117) [152]  (1.215 ns)
+	'select' operation 5 bit ('select_ln117_121', firmware/BDT.h:117) [154]  (0.000 ns)
+	'select' operation 5 bit ('select_ln117_122', firmware/BDT.h:117) [156]  (1.215 ns)
+
+ <State 6>: 3.171ns
+The critical path consists of the following:
+	'and' operation 1 bit ('and_ln102_110', firmware/BDT.h:102) [90]  (0.978 ns)
+	'or' operation 1 bit ('or_ln117_119', firmware/BDT.h:117) [157]  (0.978 ns)
+	'select' operation 5 bit ('select_ln117_124', firmware/BDT.h:117) [160]  (1.215 ns)
+
+ <State 7>: 3.205ns
+The critical path consists of the following:
+	'xor' operation 1 bit ('xor_ln104_60', firmware/BDT.h:104) [91]  (0.000 ns)
+	'and' operation 1 bit ('and_ln102_128', firmware/BDT.h:102) [108]  (0.000 ns)
+	'and' operation 1 bit ('and_ln102_122', firmware/BDT.h:102) [109]  (0.000 ns)
+	'or' operation 1 bit ('or_ln117_120', firmware/BDT.h:117) [159]  (0.000 ns)
+	'select' operation 5 bit ('select_ln117_125', firmware/BDT.h:117) [161]  (0.000 ns)
+	'sparsemux' operation 12 bit ('agg_result', firmware/BDT.h:118) [162]  (3.205 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

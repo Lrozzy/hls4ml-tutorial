@@ -1,0 +1,55 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Thu Jan 23 13:51:29 2025
+# Process ID: 1091116
+# Current directory: /home/hep/lr1424/hls4ml-tutorial/model_5_pynq/conifer_jettag/solution1/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /home/hep/lr1424/hls4ml-tutorial/model_5_pynq/conifer_jettag/solution1/impl/ip/vivado.log
+# Journal file: /home/hep/lr1424/hls4ml-tutorial/model_5_pynq/conifer_jettag/solution1/impl/ip/vivado.jou
+# Running On        :lxfw00.hep.ph.ic.ac.uk
+# Platform          :RockyLinux
+# Operating System  :Rocky Linux 9.5 (Blue Onyx)
+# Processor Detail  :Intel(R) Xeon(R) Gold 5122 CPU @ 3.60GHz
+# CPU Frequency     :3699.769 MHz
+# CPU Physical cores:4
+# CPU Logical cores :4
+# Host memory       :200636 MB
+# Swap memory       :4294 MB
+# Total Virtual     :204931 MB
+# Available Virtual :189217 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+INFO: calling package_hls_ip ip_types=vitis sysgen json_file=/home/hep/lr1424/hls4ml-tutorial/model_5_pynq/conifer_jettag/solution1/solution1_data.json outdir=/home/hep/lr1424/hls4ml-tutorial/model_5_pynq/conifer_jettag/solution1/impl/ip srcdir=/home/hep/lr1424/hls4ml-tutorial/model_5_pynq/conifer_jettag/solution1 sort_interfaces_ports=false
+INFO: Copied 1 ipmisc file(s) to /home/hep/lr1424/hls4ml-tutorial/model_5_pynq/conifer_jettag/solution1/impl/ip/misc
+INFO: Copied 264 verilog file(s) to /home/hep/lr1424/hls4ml-tutorial/model_5_pynq/conifer_jettag/solution1/impl/ip/hdl/verilog
+INFO: Copied 264 vhdl file(s) to /home/hep/lr1424/hls4ml-tutorial/model_5_pynq/conifer_jettag/solution1/impl/ip/hdl/vhdl
+INFO: Copied 10 swdriver file(s) to /home/hep/lr1424/hls4ml-tutorial/model_5_pynq/conifer_jettag/solution1/impl/ip/drivers
+Generating 1 subcores in /home/hep/lr1424/hls4ml-tutorial/model_5_pynq/conifer_jettag/solution1/impl/ip/hdl/ip.tmp:
+impl/misc/conifer_jettag_accelerator_fpext_32ns_64_4_no_dsp_1_ip.tcl
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1443.586 ; gain = 15.898 ; free physical = 160512 ; free virtual = 179973
+INFO: Using COE_DIR=/home/hep/lr1424/hls4ml-tutorial/model_5_pynq/conifer_jettag/solution1/impl/ip/hdl/verilog
+INFO: Generating conifer_jettag_accelerator_fpext_32ns_64_4_no_dsp_1_ip via file impl/misc/conifer_jettag_accelerator_fpext_32ns_64_4_no_dsp_1_ip.tcl
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/local/Vivado/2024.1/data/ip'.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'conifer_jettag_accelerator_fpext_32ns_64_4_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'conifer_jettag_accelerator_fpext_32ns_64_4_no_dsp_1_ip'...
+INFO: Done generating conifer_jettag_accelerator_fpext_32ns_64_4_no_dsp_1_ip via file impl/misc/conifer_jettag_accelerator_fpext_32ns_64_4_no_dsp_1_ip.tcl
+INFO: Import ports from HDL: /home/hep/lr1424/hls4ml-tutorial/model_5_pynq/conifer_jettag/solution1/impl/ip/hdl/vhdl/conifer_jettag_accelerator.vhd (conifer_jettag_accelerator)
+INFO: Add axi4lite interface s_axi_control
+INFO: Add clock interface ap_clk
+INFO: Add reset interface ap_rst_n
+INFO: Add interrupt interface interrupt
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/local/Vivado/2024.1/data/ip'.
+INFO: Add axi4full interface m_axi_gmem0
+INFO: Calling post_process_vitis to specialize IP
+INFO: Calling post_process_sysgen to specialize IP
+Generating sysgen info xml from json file
+INFO: Created IP /home/hep/lr1424/hls4ml-tutorial/model_5_pynq/conifer_jettag/solution1/impl/ip/component.xml
+INFO: Created IP archive /home/hep/lr1424/hls4ml-tutorial/model_5_pynq/conifer_jettag/solution1/impl/ip/cern_ch_conifer_conifer_jettag_accelerator_1_5.zip
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 23 13:53:06 2025...

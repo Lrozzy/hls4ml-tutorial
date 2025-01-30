@@ -9,7 +9,7 @@ from typing import Callable
 import h5py as h5
 import numpy as np
 import tensorflow as tf
-import zstd
+import zstandard as zstd # Changed from zstd to zstandard
 from HGQ.bops import trace_minmax
 from keras.layers import Dense
 from keras.src.layers.convolutional.base_conv import Conv

@@ -1,0 +1,73 @@
+================================================================
+== Design Size Report
+================================================================
+
+* C-Synthesis has not completed!
+
+* Total Instructions per Compilation Phase
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Phase         | Step                        | Instructions | Description                                                                            |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Compile/Link  |                             |  38,834      | After all functions are compiled and linked into a single design                       |
+|               |                             |              |                                                                                        |
+| Unroll/Inline |                             |              | After user unroll and inline pragmas are applied                                       |
+|               | (1) unroll                  | 373,272 *    | user unroll pragmas are applied                                                        |
+|               | (2) simplification          |  72,551      | simplification of applied user unroll pragmas                                          |
+|               | (3) inline                  |  72,389      | user inline pragmas are applied                                                        |
+|               | (4) simplification          |  71,643      | simplification of applied user inline pragmas                                          |
+|               |                             |              |                                                                                        |
+| Array/Struct  |                             |              | After user array partition and struct aggregate/disaggregate pragmas are applied       |
+|               | (1) array partition         |  34,433      | user array partition pragmas are applied                                               |
+|               | (2) simplification          |  23,115      | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
+|               | (3) aggregate/disaggregate  |  23,115      | user struct aggregate/disaggregate pragmas are applied                                 |
+|               | (4) array reshape           |  23,115      | apply array reshape pragmas                                                            |
+|               | (5) access patterns         |  23,115      | array access pattern optmizations                                                      |
+|               |                             |              |                                                                                        |
+| Performance   |                             |  20,748      | After transformations are applied to meet performance pragma targets                   |
+|               |                             |              |                                                                                        |
+| HW Transforms |                             | pending      | After hardware transfomations                                                          |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+    * - Exceeded design size warning message threshold
+
+* Instructions per Function for each Compilation Phase
++-----------------------------------------+--------------+--------------------+--------------------+--------------------+--------------------+
+| Function                                | Location     | Compile/Link       | Unroll/Inline      | Array/Struct       | Performance        |
++-----------------------------------------+--------------+--------------------+--------------------+--------------------+--------------------+
+| + my_prj                                | my_prj.cpp:5 | 38,834             | 71,643             | 23,115             | 20,748             |
+|  + decision_function                    | BDT.h:135    | 38,830             |                    |                    |                    |
+|   + tree_scores                         | BDT.cpp:5    | 32,751             |                    |                    |                    |
+|      decision_function                  | BDT.h:53     | 31,500 (125 calls) |                    |                    |                    |
+|     fn_classes                          | BDT.h:38     |    12 (2 calls)    |                    |                    |                    |
+|   + reduce<ap_fixed<18, 8, AP_TR...     | BDT.h:20     | 5,608              |                    |                    |                    |
+|    + reduce<ap_fixed<18, 8, AP_TR...    | BDT.h:20     | 3,503              |                    |                    |                    |
+|     + reduce<ap_fixed<18, 8, AP_TR...   | BDT.h:20     | 3,270 (2 calls)    |                    |                    |                    |
+|      + reduce<ap_fixed<18, 8, AP_TR...  | BDT.h:20     | 2,804 (4 calls)    |                    |                    |                    |
+|       + reduce<ap_fixed<18, 8, AP_TR... | BDT.h:20     | 1,872 (8 calls)    |                    |                    |                    |
+|          operator()                     | BDT.h:34     | 1,792 (8 calls)    |                    |                    |                    |
+|         operator()                      | BDT.h:34     |   896 (4 calls)    |                    |                    |                    |
+|        operator()                       | BDT.h:34     |   448 (2 calls)    |                    |                    |                    |
+|       operator()                        | BDT.h:34     |   224              |                    |                    |                    |
+|    + reduce<ap_fixed<18, 8, AP_TR...    | BDT.h:20     | 1,872              |                    |                    |                    |
+|     + reduce<ap_fixed<18, 8, AP_TR...   | BDT.h:20     | 1,635              |                    |                    |                    |
+|      + reduce<ap_fixed<18, 8, AP_TR...  | BDT.h:20     | 1,402 (2 calls)    |                    |                    |                    |
+|       + reduce<ap_fixed<18, 8, AP_TR... | BDT.h:20     |   936 (4 calls)    |                    |                    |                    |
+|          operator()                     | BDT.h:34     |   896 (4 calls)    |                    |                    |                    |
+|         operator()                      | BDT.h:34     |   448 (2 calls)    |                    |                    |                    |
+|        operator()                       | BDT.h:34     |   224              |                    |                    |                    |
+|       reduce<ap_fixed<18, 8, AP_TR...   | BDT.h:20     |     4              |                    |                    |                    |
+|       operator()                        | BDT.h:34     |   224              |                    |                    |                    |
+|      operator()                         | BDT.h:34     |   224              |                    |                    |                    |
+|  + tree_scores                          | BDT.cpp:5    |                    | 70,529             | 21,636             | 19,219             |
+|     decision_function                   | BDT.h:53     |                    | 69,153 (125 calls) | 21,135 (125 calls) | 18,718 (125 calls) |
+|  + reduce<ap_fixed<18, 8, AP_TR...      | BDT.h:20     |                    | 1,000 (5 calls)    |   880 (5 calls)    |   755 (5 calls)    |
+|     reduce<ap_fixed<18, 8, AP_TR...     | BDT.h:20     |                    |   615 (5 calls)    |   540 (5 calls)    |   460 (5 calls)    |
++-----------------------------------------+--------------+--------------------+--------------------+--------------------+--------------------+
+
+* Design Size Message Settings
++---------------------------------------------+--------+------------------------------------------------------------------+
+| Message Setting                             | Value  | Description                                                      |
++---------------------------------------------+--------+------------------------------------------------------------------+
+| config_compile -design_size_maximum_warning | 100000 | Show a warning when total design instructions exceeds this value |
++---------------------------------------------+--------+------------------------------------------------------------------+
+
+

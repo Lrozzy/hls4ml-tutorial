@@ -1,0 +1,191 @@
+
+
+================================================================
+== Vitis HLS Report for 'reduce_ap_fixed_18_8_5_3_0_25_OpAdd_ap_fixed_18_8_5_3_0_s'
+================================================================
+* Date:           Thu Jan 23 13:48:35 2025
+
+* Version:        2024.1 (Build 5069499 on May 21 2024)
+* Project:        conifer_jettag
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  2.136 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        4|        4|  20.000 ns|  20.000 ns|    1|    1|      yes|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 5
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 5, States = { 1 2 3 4 5 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.13>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%x_24_val_read = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %x_24_val" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 6 'read' 'x_24_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%x_23_val_read = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %x_23_val" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 7 'read' 'x_23_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%x_22_val_read = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %x_22_val" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 8 'read' 'x_22_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%x_21_val_read = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %x_21_val" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 9 'read' 'x_21_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%x_20_val_read = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %x_20_val" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 10 'read' 'x_20_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%x_19_val_read = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %x_19_val" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 11 'read' 'x_19_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%x_18_val_read = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %x_18_val" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 12 'read' 'x_18_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%x_17_val_read = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %x_17_val" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 13 'read' 'x_17_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%x_16_val_read = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %x_16_val" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 14 'read' 'x_16_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%x_15_val16_read = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %x_15_val16" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 15 'read' 'x_15_val16_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%x_14_val15_read = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %x_14_val15" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 16 'read' 'x_14_val15_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%x_13_val14_read = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %x_13_val14" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 17 'read' 'x_13_val14_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%x_12_val13_read = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %x_12_val13" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 18 'read' 'x_12_val13_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%x_11_val12_read = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %x_11_val12" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 19 'read' 'x_11_val12_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%x_10_val11_read = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %x_10_val11" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 20 'read' 'x_10_val11_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%x_9_val10_read = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %x_9_val10" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 21 'read' 'x_9_val10_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%x_8_val9_read = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %x_8_val9" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 22 'read' 'x_8_val9_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%x_7_val8_read = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %x_7_val8" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 23 'read' 'x_7_val8_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%x_6_val7_read = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %x_6_val7" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 24 'read' 'x_6_val7_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%x_5_val6_read = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %x_5_val6" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 25 'read' 'x_5_val6_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%x_4_val5_read = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %x_4_val5" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 26 'read' 'x_4_val5_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%x_3_val4_read = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %x_3_val4" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 27 'read' 'x_3_val4_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%x_2_val3_read = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %x_2_val3" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 28 'read' 'x_2_val3_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%x_1_val2_read = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %x_1_val2" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 29 'read' 'x_1_val2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%x_0_val1_read = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %x_0_val1" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 30 'read' 'x_0_val1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (2.13ns)   --->   "%add_ln34 = add i18 %x_16_val_read, i18 %x_18_val_read" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 31 'add' 'add_ln34' <Predicate = true> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 32 [1/1] (2.13ns)   --->   "%add_ln34_2 = add i18 %x_20_val_read, i18 %x_21_val_read" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 32 'add' 'add_ln34_2' <Predicate = true> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (2.13ns)   --->   "%add_ln34_5 = add i18 %x_23_val_read, i18 %x_24_val_read" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 33 'add' 'add_ln34_5' <Predicate = true> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 34 [1/1] (2.13ns)   --->   "%add_ln34_7 = add i18 %x_14_val15_read, i18 %x_13_val14_read" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 34 'add' 'add_ln34_7' <Predicate = true> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 35 [1/1] (2.13ns)   --->   "%add_ln34_12 = add i18 %x_11_val12_read, i18 %x_10_val11_read" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 35 'add' 'add_ln34_12' <Predicate = true> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 36 [1/1] (2.13ns)   --->   "%add_ln34_14 = add i18 %x_8_val9_read, i18 %x_7_val8_read" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 36 'add' 'add_ln34_14' <Predicate = true> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 37 [1/1] (2.13ns)   --->   "%add_ln34_17 = add i18 %x_5_val6_read, i18 %x_4_val5_read" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 37 'add' 'add_ln34_17' <Predicate = true> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 38 [1/1] (2.13ns)   --->   "%add_ln34_19 = add i18 %x_3_val4_read, i18 %x_2_val3_read" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 38 'add' 'add_ln34_19' <Predicate = true> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 39 [1/1] (2.13ns)   --->   "%add_ln34_20 = add i18 %x_0_val1_read, i18 %x_1_val2_read" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 39 'add' 'add_ln34_20' <Predicate = true> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 2.13>
+ST_2 : Operation 40 [1/1] (2.13ns)   --->   "%add_ln34_1 = add i18 %add_ln34, i18 %x_17_val_read" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 40 'add' 'add_ln34_1' <Predicate = true> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 41 [1/1] (2.13ns)   --->   "%add_ln34_3 = add i18 %add_ln34_2, i18 %x_19_val_read" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 41 'add' 'add_ln34_3' <Predicate = true> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 42 [1/1] (2.13ns)   --->   "%add_ln34_6 = add i18 %add_ln34_5, i18 %x_22_val_read" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 42 'add' 'add_ln34_6' <Predicate = true> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 43 [1/1] (2.13ns)   --->   "%add_ln34_9 = add i18 %add_ln34_7, i18 %x_15_val16_read" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 43 'add' 'add_ln34_9' <Predicate = true> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 44 [1/1] (2.13ns)   --->   "%add_ln34_13 = add i18 %add_ln34_12, i18 %x_12_val13_read" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 44 'add' 'add_ln34_13' <Predicate = true> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 45 [1/1] (2.13ns)   --->   "%add_ln34_15 = add i18 %add_ln34_14, i18 %x_9_val10_read" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 45 'add' 'add_ln34_15' <Predicate = true> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 46 [1/1] (2.13ns)   --->   "%add_ln34_18 = add i18 %add_ln34_17, i18 %x_6_val7_read" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 46 'add' 'add_ln34_18' <Predicate = true> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 47 [1/1] (2.13ns)   --->   "%add_ln34_21 = add i18 %add_ln34_20, i18 %add_ln34_19" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 47 'add' 'add_ln34_21' <Predicate = true> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 2.13>
+ST_3 : Operation 48 [1/1] (2.13ns)   --->   "%add_ln34_4 = add i18 %add_ln34_3, i18 %add_ln34_1" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 48 'add' 'add_ln34_4' <Predicate = true> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 49 [1/1] (2.13ns)   --->   "%add_ln34_10 = add i18 %add_ln34_9, i18 %add_ln34_6" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 49 'add' 'add_ln34_10' <Predicate = true> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 50 [1/1] (2.13ns)   --->   "%add_ln34_16 = add i18 %add_ln34_15, i18 %add_ln34_13" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 50 'add' 'add_ln34_16' <Predicate = true> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 51 [1/1] (2.13ns)   --->   "%add_ln34_22 = add i18 %add_ln34_21, i18 %add_ln34_18" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 51 'add' 'add_ln34_22' <Predicate = true> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 2.13>
+ST_4 : Operation 52 [1/1] (2.13ns)   --->   "%add_ln34_11 = add i18 %add_ln34_10, i18 %add_ln34_4" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 52 'add' 'add_ln34_11' <Predicate = true> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 53 [1/1] (2.13ns)   --->   "%add_ln34_23 = add i18 %add_ln34_22, i18 %add_ln34_16" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 53 'add' 'add_ln34_23' <Predicate = true> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 2.13>
+ST_5 : Operation 54 [1/1] (2.13ns)   --->   "%add_ln34_8 = add i18 %add_ln34_23, i18 %add_ln34_11" [firmware/BDT.h:34->firmware/BDT.h:29]   --->   Operation 54 'add' 'add_ln34_8' <Predicate = true> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 55 [1/1] (0.00ns)   --->   "%ret_ln29 = ret i18 %add_ln34_8" [firmware/BDT.h:29]   --->   Operation 55 'ret' 'ret_ln29' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5.000ns, clock uncertainty: 1.350ns.
+
+ <State 1>: 2.136ns
+The critical path consists of the following:
+	wire read operation ('x_18_val_read', firmware/BDT.h:34->firmware/BDT.h:29) on port 'x_18_val' (firmware/BDT.h:34->firmware/BDT.h:29) [32]  (0.000 ns)
+	'add' operation 18 bit ('add_ln34', firmware/BDT.h:34->firmware/BDT.h:29) [51]  (2.136 ns)
+
+ <State 2>: 2.136ns
+The critical path consists of the following:
+	'add' operation 18 bit ('add_ln34_1', firmware/BDT.h:34->firmware/BDT.h:29) [52]  (2.136 ns)
+
+ <State 3>: 2.136ns
+The critical path consists of the following:
+	'add' operation 18 bit ('add_ln34_4', firmware/BDT.h:34->firmware/BDT.h:29) [55]  (2.136 ns)
+
+ <State 4>: 2.136ns
+The critical path consists of the following:
+	'add' operation 18 bit ('add_ln34_11', firmware/BDT.h:34->firmware/BDT.h:29) [61]  (2.136 ns)
+
+ <State 5>: 2.136ns
+The critical path consists of the following:
+	'add' operation 18 bit ('add_ln34_8', firmware/BDT.h:34->firmware/BDT.h:29) [74]  (2.136 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

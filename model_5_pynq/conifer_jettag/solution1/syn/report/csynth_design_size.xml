@@ -1,0 +1,93 @@
+<design_size title="Design Size Report">
+    <item name="Total Instructions per Compilation Phase">
+        <table>
+            <keys size="4">Phase, Step, Instructions, Description</keys>
+            <column name="Compile/Link">,  39666, After all functions are compiled and linked into a single design</column>
+            <column name="">, , </column>
+            <column name="Unroll/Inline">, , After user unroll and inline pragmas are applied</column>
+            <column name="">(1) unroll, 377701 *, user unroll pragmas are applied</column>
+            <column name="">(2) simplification,  76405, simplification of applied user unroll pragmas</column>
+            <column name="">(3) inline,  76138, user inline pragmas are applied</column>
+            <column name="">(4) simplification,  74542, simplification of applied user inline pragmas</column>
+            <column name="">, , </column>
+            <column name="Array/Struct">, , After user array partition and struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(1) array partition,  39743, user array partition pragmas are applied</column>
+            <column name="">(2) simplification,  28425, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
+            <column name="">(3) aggregate/disaggregate ,  28425, user struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(4) array reshape,  28425, apply array reshape pragmas</column>
+            <column name="">(5) access patterns,  28262, array access pattern optmizations</column>
+            <column name="">, , </column>
+            <column name="Performance">, , After transformations are applied to meet performance pragma targets</column>
+            <column name="">(1) loop simplification,  28262, loop and instruction simplification</column>
+            <column name="">(2) parallelization,  28262, loops are unrolled or pipelined to meet performance targets</column>
+            <column name="">(3) array partition,  28261, arrays are partitioned to meet performance targets</column>
+            <column name="">(4) simplification,  28261, simplification of design after performance transformations</column>
+            <column name="">, , </column>
+            <column name="HW Transforms">, , After hardware transfomations</column>
+            <column name="">(1) lowering,  28321, initial conversion to HW specific instructions</column>
+            <column name="">(2) optimizations,  28055, high level synthesis optimizations</column>
+        </table>
+    </item>
+    <item name="Instructions per Function for each Compilation Phase">
+        <hiertable>
+            <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
+            <rows>
+                <row id="0" col0="conifer_jettag_accelerator" col1="conifer_jettag.cpp:25" col2="39666" col3="74542" col4="28262" col5="28261" col6="28055">
+                    <row id="114" col0="fn_classes" col1="BDT.h:38" col2="6" col3="" col4="" col5="" col6=""/>
+                    <row id="43" col0="copy_input" col1="conifer_jettag.cpp:13" col2="422" col3="2544" col4="2391" col5="2391" col6="2445"/>
+                    <row id="95" col0="decision_function" col1="BDT.h:135" col2="38830" col3="" col4="" col5="" col6="">
+                        <row id="131" col0="tree_scores" col1="BDT.cpp:5" col2="32751" col3="" col4="" col5="" col6="">
+                            <row id="1" col0="decision_function" col1="BDT.h:53" col2="31500" col2_disp="31,500 (125 calls)" col3="" col4="" col5="" col6=""/>
+                        </row>
+                        <row id="114" col0="fn_classes" col1="BDT.h:38" col2="12" col2_disp="   12 (2 calls)" col3="" col4="" col5="" col6=""/>
+                        <row id="86" col0="reduce&lt;ap_fixed&lt;18, 8, AP_TRN, AP_WRAP, 0&gt;, 25, BDT::OpAdd&lt;ap_fixed&lt;18, 8, AP_TRN, AP_WRAP, 0&gt; &gt; &gt;" col1="BDT.h:20" col2="5608" col3="" col4="" col5="" col6="">
+                            <row id="61" col0="reduce&lt;ap_fixed&lt;18, 8, AP_TRN, AP_WRAP, 0&gt;, 16, BDT::OpAdd&lt;ap_fixed&lt;18, 8, AP_TRN, AP_WRAP, 0&gt; &gt; &gt;" col1="BDT.h:20" col2="3503" col3="" col4="" col5="" col6="">
+                                <row id="82" col0="reduce&lt;ap_fixed&lt;18, 8, AP_TRN, AP_WRAP, 0&gt;, 8, BDT::OpAdd&lt;ap_fixed&lt;18, 8, AP_TRN, AP_WRAP, 0&gt; &gt; &gt;" col1="BDT.h:20" col2="3270" col2_disp="3,270 (2 calls)" col3="" col4="" col5="" col6="">
+                                    <row id="59" col0="reduce&lt;ap_fixed&lt;18, 8, AP_TRN, AP_WRAP, 0&gt;, 4, BDT::OpAdd&lt;ap_fixed&lt;18, 8, AP_TRN, AP_WRAP, 0&gt; &gt; &gt;" col1="BDT.h:20" col2="2804" col2_disp="2,804 (4 calls)" col3="" col4="" col5="" col6="">
+                                        <row id="127" col0="reduce&lt;ap_fixed&lt;18, 8, AP_TRN, AP_WRAP, 0&gt;, 2, BDT::OpAdd&lt;ap_fixed&lt;18, 8, AP_TRN, AP_WRAP, 0&gt; &gt; &gt;" col1="BDT.h:20" col2="1872" col2_disp="1,872 (8 calls)" col3="" col4="" col5="" col6="">
+                                            <row id="89" col0="operator()" col1="BDT.h:34" col2="1792" col2_disp="1,792 (8 calls)" col3="" col4="" col5="" col6=""/>
+                                        </row>
+                                        <row id="89" col0="operator()" col1="BDT.h:34" col2="896" col2_disp="  896 (4 calls)" col3="" col4="" col5="" col6=""/>
+                                    </row>
+                                    <row id="89" col0="operator()" col1="BDT.h:34" col2="448" col2_disp="  448 (2 calls)" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="89" col0="operator()" col1="BDT.h:34" col2="224" col3="" col4="" col5="" col6=""/>
+                            </row>
+                            <row id="96" col0="reduce&lt;ap_fixed&lt;18, 8, AP_TRN, AP_WRAP, 0&gt;, 9, BDT::OpAdd&lt;ap_fixed&lt;18, 8, AP_TRN, AP_WRAP, 0&gt; &gt; &gt;" col1="BDT.h:20" col2="1872" col3="" col4="" col5="" col6="">
+                                <row id="82" col0="reduce&lt;ap_fixed&lt;18, 8, AP_TRN, AP_WRAP, 0&gt;, 8, BDT::OpAdd&lt;ap_fixed&lt;18, 8, AP_TRN, AP_WRAP, 0&gt; &gt; &gt;" col1="BDT.h:20" col2="1635" col3="" col4="" col5="" col6="">
+                                    <row id="59" col0="reduce&lt;ap_fixed&lt;18, 8, AP_TRN, AP_WRAP, 0&gt;, 4, BDT::OpAdd&lt;ap_fixed&lt;18, 8, AP_TRN, AP_WRAP, 0&gt; &gt; &gt;" col1="BDT.h:20" col2="1402" col2_disp="1,402 (2 calls)" col3="" col4="" col5="" col6="">
+                                        <row id="127" col0="reduce&lt;ap_fixed&lt;18, 8, AP_TRN, AP_WRAP, 0&gt;, 2, BDT::OpAdd&lt;ap_fixed&lt;18, 8, AP_TRN, AP_WRAP, 0&gt; &gt; &gt;" col1="BDT.h:20" col2="936" col2_disp="  936 (4 calls)" col3="" col4="" col5="" col6="">
+                                            <row id="89" col0="operator()" col1="BDT.h:34" col2="896" col2_disp="  896 (4 calls)" col3="" col4="" col5="" col6=""/>
+                                        </row>
+                                        <row id="89" col0="operator()" col1="BDT.h:34" col2="448" col2_disp="  448 (2 calls)" col3="" col4="" col5="" col6=""/>
+                                    </row>
+                                    <row id="89" col0="operator()" col1="BDT.h:34" col2="224" col3="" col4="" col5="" col6=""/>
+                                </row>
+                                <row id="2" col0="reduce&lt;ap_fixed&lt;18, 8, AP_TRN, AP_WRAP, 0&gt;, 1, BDT::OpAdd&lt;ap_fixed&lt;18, 8, AP_TRN, AP_WRAP, 0&gt; &gt; &gt;" col1="BDT.h:20" col2="4" col3="" col4="" col5="" col6=""/>
+                                <row id="89" col0="operator()" col1="BDT.h:34" col2="224" col3="" col4="" col5="" col6=""/>
+                            </row>
+                            <row id="89" col0="operator()" col1="BDT.h:34" col2="224" col3="" col4="" col5="" col6=""/>
+                        </row>
+                    </row>
+                    <row id="129" col0="copy_output" col1="conifer_jettag.cpp:19" col2="370" col3="325" col4="316" col5="316" col6="313">
+                        <row id="114" col0="fn_classes" col1="BDT.h:38" col2="12" col2_disp="   12 (2 calls)" col3="" col4="" col5="" col6=""/>
+                    </row>
+                    <row id="131" col0="tree_scores" col1="BDT.cpp:5" col2="" col3="70529" col4="24053" col5="24053" col6="24178">
+                        <row id="1" col0="decision_function" col1="BDT.h:53" col2="" col3="69153" col3_disp="69,153 (125 calls)" col4="23552" col4_disp="23,552 (125 calls)" col5="23552" col5_disp="23,552 (125 calls)" col6="23677" col6_disp="23,677 (125 calls)"/>
+                    </row>
+                    <row id="86" col0="reduce&lt;ap_fixed&lt;18, 8, AP_TRN, AP_WRAP, 0&gt;, 25, BDT::OpAdd&lt;ap_fixed&lt;18, 8, AP_TRN, AP_WRAP, 0&gt; &gt; &gt;" col1="BDT.h:20" col2="" col3="1000" col3_disp="1,000 (5 calls)" col4="880" col4_disp="  880 (5 calls)" col5="755" col5_disp="  755 (5 calls)" col6="755" col6_disp="  755 (5 calls)">
+                        <row id="61" col0="reduce&lt;ap_fixed&lt;18, 8, AP_TRN, AP_WRAP, 0&gt;, 16, BDT::OpAdd&lt;ap_fixed&lt;18, 8, AP_TRN, AP_WRAP, 0&gt; &gt; &gt;" col1="BDT.h:20" col2="" col3="615" col3_disp="  615 (5 calls)" col4="540" col4_disp="  540 (5 calls)" col5="460" col5_disp="  460 (5 calls)" col6="460" col6_disp="  460 (5 calls)"/>
+                    </row>
+                </row>
+            </rows>
+            <notes/>
+        </hiertable>
+    </item>
+    <item name="Design Size Message Settings">
+        <table>
+            <keys size="3">Message Setting, Value, Description</keys>
+            <column name="config_compile -design_size_maximum_warning">100000, Show a warning when total design instructions exceeds this value</column>
+        </table>
+    </item>
+</design_size>
+

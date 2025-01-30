@@ -1,0 +1,312 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'my_prj'" level="0">
+<item name = "Date">Thu Jan 23 13:42:32 2025
+</item>
+<item name = "Version">2024.1 (Build 5069499 on May 21 2024)</item>
+<item name = "Project">my_prj</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcu250-figd2104-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00 ns, 3.645 ns, 1.35 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">2, 2, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_tree_scores_fu_477">tree_scores, 1, 1, 5.000 ns, 5.000 ns, 1, 1, yes</column>
+<column name="ref_tmp_i_assign_8_reduce_ap_fixed_18_8_5_3_0_25_OpAdd_ap_fixed_18_8_5_3_0_s_fu_581">reduce_ap_fixed_18_8_5_3_0_25_OpAdd_ap_fixed_18_8_5_3_0_s, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp_i_assign_7_reduce_ap_fixed_18_8_5_3_0_25_OpAdd_ap_fixed_18_8_5_3_0_s_fu_611">reduce_ap_fixed_18_8_5_3_0_25_OpAdd_ap_fixed_18_8_5_3_0_s, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp_i_assign_6_reduce_ap_fixed_18_8_5_3_0_25_OpAdd_ap_fixed_18_8_5_3_0_s_fu_641">reduce_ap_fixed_18_8_5_3_0_25_OpAdd_ap_fixed_18_8_5_3_0_s, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp_i_assign_5_reduce_ap_fixed_18_8_5_3_0_25_OpAdd_ap_fixed_18_8_5_3_0_s_fu_671">reduce_ap_fixed_18_8_5_3_0_25_OpAdd_ap_fixed_18_8_5_3_0_s, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp_i_assign_4_reduce_ap_fixed_18_8_5_3_0_25_OpAdd_ap_fixed_18_8_5_3_0_s_fu_701">reduce_ap_fixed_18_8_5_3_0_25_OpAdd_ap_fixed_18_8_5_3_0_s, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 2, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, 2772, 143772, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, -, -</column>
+<column name="Register">-, -, 2253, -, -</column>
+<specialColumn name="Available SLR">1344, 3072, 864000, 432000, 320</specialColumn>
+<specialColumn name="Utilization SLR (%)">0, 0, ~0, 33, 0</specialColumn>
+<specialColumn name="Available">5376, 12288, 3456000, 1728000, 1280</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, 8, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="ref_tmp_i_assign_8_reduce_ap_fixed_18_8_5_3_0_25_OpAdd_ap_fixed_18_8_5_3_0_s_fu_581">reduce_ap_fixed_18_8_5_3_0_25_OpAdd_ap_fixed_18_8_5_3_0_s, 0, 0, 0, 460, 0</column>
+<column name="ref_tmp_i_assign_7_reduce_ap_fixed_18_8_5_3_0_25_OpAdd_ap_fixed_18_8_5_3_0_s_fu_611">reduce_ap_fixed_18_8_5_3_0_25_OpAdd_ap_fixed_18_8_5_3_0_s, 0, 0, 0, 460, 0</column>
+<column name="ref_tmp_i_assign_6_reduce_ap_fixed_18_8_5_3_0_25_OpAdd_ap_fixed_18_8_5_3_0_s_fu_641">reduce_ap_fixed_18_8_5_3_0_25_OpAdd_ap_fixed_18_8_5_3_0_s, 0, 0, 0, 460, 0</column>
+<column name="ref_tmp_i_assign_5_reduce_ap_fixed_18_8_5_3_0_25_OpAdd_ap_fixed_18_8_5_3_0_s_fu_671">reduce_ap_fixed_18_8_5_3_0_25_OpAdd_ap_fixed_18_8_5_3_0_s, 0, 0, 0, 460, 0</column>
+<column name="ref_tmp_i_assign_4_reduce_ap_fixed_18_8_5_3_0_25_OpAdd_ap_fixed_18_8_5_3_0_s_fu_701">reduce_ap_fixed_18_8_5_3_0_25_OpAdd_ap_fixed_18_8_5_3_0_s, 0, 0, 0, 460, 0</column>
+<column name="grp_tree_scores_fu_477">tree_scores, 0, 0, 2772, 141472, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
+<column name="scores_100_reg_1731">18, 0, 18, 0</column>
+<column name="scores_101_reg_1736">18, 0, 18, 0</column>
+<column name="scores_102_reg_1741">18, 0, 18, 0</column>
+<column name="scores_103_reg_1746">18, 0, 18, 0</column>
+<column name="scores_104_reg_1751">18, 0, 18, 0</column>
+<column name="scores_105_reg_1756">18, 0, 18, 0</column>
+<column name="scores_106_reg_1761">18, 0, 18, 0</column>
+<column name="scores_107_reg_1766">18, 0, 18, 0</column>
+<column name="scores_108_reg_1771">18, 0, 18, 0</column>
+<column name="scores_109_reg_1776">18, 0, 18, 0</column>
+<column name="scores_10_reg_1281">18, 0, 18, 0</column>
+<column name="scores_110_reg_1781">18, 0, 18, 0</column>
+<column name="scores_111_reg_1786">18, 0, 18, 0</column>
+<column name="scores_112_reg_1791">18, 0, 18, 0</column>
+<column name="scores_113_reg_1796">18, 0, 18, 0</column>
+<column name="scores_114_reg_1801">18, 0, 18, 0</column>
+<column name="scores_115_reg_1806">18, 0, 18, 0</column>
+<column name="scores_116_reg_1811">18, 0, 18, 0</column>
+<column name="scores_117_reg_1816">18, 0, 18, 0</column>
+<column name="scores_118_reg_1821">18, 0, 18, 0</column>
+<column name="scores_119_reg_1826">18, 0, 18, 0</column>
+<column name="scores_11_reg_1286">18, 0, 18, 0</column>
+<column name="scores_120_reg_1831">18, 0, 18, 0</column>
+<column name="scores_121_reg_1836">18, 0, 18, 0</column>
+<column name="scores_122_reg_1841">18, 0, 18, 0</column>
+<column name="scores_123_reg_1846">18, 0, 18, 0</column>
+<column name="scores_124_reg_1851">18, 0, 18, 0</column>
+<column name="scores_12_reg_1291">18, 0, 18, 0</column>
+<column name="scores_13_reg_1296">18, 0, 18, 0</column>
+<column name="scores_14_reg_1301">18, 0, 18, 0</column>
+<column name="scores_15_reg_1306">18, 0, 18, 0</column>
+<column name="scores_16_reg_1311">18, 0, 18, 0</column>
+<column name="scores_17_reg_1316">18, 0, 18, 0</column>
+<column name="scores_18_reg_1321">18, 0, 18, 0</column>
+<column name="scores_19_reg_1326">18, 0, 18, 0</column>
+<column name="scores_1_reg_1236">18, 0, 18, 0</column>
+<column name="scores_20_reg_1331">18, 0, 18, 0</column>
+<column name="scores_21_reg_1336">18, 0, 18, 0</column>
+<column name="scores_22_reg_1341">18, 0, 18, 0</column>
+<column name="scores_23_reg_1346">18, 0, 18, 0</column>
+<column name="scores_24_reg_1351">18, 0, 18, 0</column>
+<column name="scores_25_reg_1356">18, 0, 18, 0</column>
+<column name="scores_26_reg_1361">18, 0, 18, 0</column>
+<column name="scores_27_reg_1366">18, 0, 18, 0</column>
+<column name="scores_28_reg_1371">18, 0, 18, 0</column>
+<column name="scores_29_reg_1376">18, 0, 18, 0</column>
+<column name="scores_2_reg_1241">18, 0, 18, 0</column>
+<column name="scores_30_reg_1381">18, 0, 18, 0</column>
+<column name="scores_31_reg_1386">18, 0, 18, 0</column>
+<column name="scores_32_reg_1391">18, 0, 18, 0</column>
+<column name="scores_33_reg_1396">18, 0, 18, 0</column>
+<column name="scores_34_reg_1401">18, 0, 18, 0</column>
+<column name="scores_35_reg_1406">18, 0, 18, 0</column>
+<column name="scores_36_reg_1411">18, 0, 18, 0</column>
+<column name="scores_37_reg_1416">18, 0, 18, 0</column>
+<column name="scores_38_reg_1421">18, 0, 18, 0</column>
+<column name="scores_39_reg_1426">18, 0, 18, 0</column>
+<column name="scores_3_reg_1246">18, 0, 18, 0</column>
+<column name="scores_40_reg_1431">18, 0, 18, 0</column>
+<column name="scores_41_reg_1436">18, 0, 18, 0</column>
+<column name="scores_42_reg_1441">18, 0, 18, 0</column>
+<column name="scores_43_reg_1446">18, 0, 18, 0</column>
+<column name="scores_44_reg_1451">18, 0, 18, 0</column>
+<column name="scores_45_reg_1456">18, 0, 18, 0</column>
+<column name="scores_46_reg_1461">18, 0, 18, 0</column>
+<column name="scores_47_reg_1466">18, 0, 18, 0</column>
+<column name="scores_48_reg_1471">18, 0, 18, 0</column>
+<column name="scores_49_reg_1476">18, 0, 18, 0</column>
+<column name="scores_4_reg_1251">18, 0, 18, 0</column>
+<column name="scores_50_reg_1481">18, 0, 18, 0</column>
+<column name="scores_51_reg_1486">18, 0, 18, 0</column>
+<column name="scores_52_reg_1491">18, 0, 18, 0</column>
+<column name="scores_53_reg_1496">18, 0, 18, 0</column>
+<column name="scores_54_reg_1501">18, 0, 18, 0</column>
+<column name="scores_55_reg_1506">18, 0, 18, 0</column>
+<column name="scores_56_reg_1511">18, 0, 18, 0</column>
+<column name="scores_57_reg_1516">18, 0, 18, 0</column>
+<column name="scores_58_reg_1521">18, 0, 18, 0</column>
+<column name="scores_59_reg_1526">18, 0, 18, 0</column>
+<column name="scores_5_reg_1256">18, 0, 18, 0</column>
+<column name="scores_60_reg_1531">18, 0, 18, 0</column>
+<column name="scores_61_reg_1536">18, 0, 18, 0</column>
+<column name="scores_62_reg_1541">18, 0, 18, 0</column>
+<column name="scores_63_reg_1546">18, 0, 18, 0</column>
+<column name="scores_64_reg_1551">18, 0, 18, 0</column>
+<column name="scores_65_reg_1556">18, 0, 18, 0</column>
+<column name="scores_66_reg_1561">18, 0, 18, 0</column>
+<column name="scores_67_reg_1566">18, 0, 18, 0</column>
+<column name="scores_68_reg_1571">18, 0, 18, 0</column>
+<column name="scores_69_reg_1576">18, 0, 18, 0</column>
+<column name="scores_6_reg_1261">18, 0, 18, 0</column>
+<column name="scores_70_reg_1581">18, 0, 18, 0</column>
+<column name="scores_71_reg_1586">18, 0, 18, 0</column>
+<column name="scores_72_reg_1591">18, 0, 18, 0</column>
+<column name="scores_73_reg_1596">18, 0, 18, 0</column>
+<column name="scores_74_reg_1601">18, 0, 18, 0</column>
+<column name="scores_75_reg_1606">18, 0, 18, 0</column>
+<column name="scores_76_reg_1611">18, 0, 18, 0</column>
+<column name="scores_77_reg_1616">18, 0, 18, 0</column>
+<column name="scores_78_reg_1621">18, 0, 18, 0</column>
+<column name="scores_79_reg_1626">18, 0, 18, 0</column>
+<column name="scores_7_reg_1266">18, 0, 18, 0</column>
+<column name="scores_80_reg_1631">18, 0, 18, 0</column>
+<column name="scores_81_reg_1636">18, 0, 18, 0</column>
+<column name="scores_82_reg_1641">18, 0, 18, 0</column>
+<column name="scores_83_reg_1646">18, 0, 18, 0</column>
+<column name="scores_84_reg_1651">18, 0, 18, 0</column>
+<column name="scores_85_reg_1656">18, 0, 18, 0</column>
+<column name="scores_86_reg_1661">18, 0, 18, 0</column>
+<column name="scores_87_reg_1666">18, 0, 18, 0</column>
+<column name="scores_88_reg_1671">18, 0, 18, 0</column>
+<column name="scores_89_reg_1676">18, 0, 18, 0</column>
+<column name="scores_8_reg_1271">18, 0, 18, 0</column>
+<column name="scores_90_reg_1681">18, 0, 18, 0</column>
+<column name="scores_91_reg_1686">18, 0, 18, 0</column>
+<column name="scores_92_reg_1691">18, 0, 18, 0</column>
+<column name="scores_93_reg_1696">18, 0, 18, 0</column>
+<column name="scores_94_reg_1701">18, 0, 18, 0</column>
+<column name="scores_95_reg_1706">18, 0, 18, 0</column>
+<column name="scores_96_reg_1711">18, 0, 18, 0</column>
+<column name="scores_97_reg_1716">18, 0, 18, 0</column>
+<column name="scores_98_reg_1721">18, 0, 18, 0</column>
+<column name="scores_99_reg_1726">18, 0, 18, 0</column>
+<column name="scores_9_reg_1276">18, 0, 18, 0</column>
+<column name="scores_reg_1231">18, 0, 18, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, my_prj, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, my_prj, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, my_prj, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, my_prj, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, my_prj, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, my_prj, return value</column>
+<column name="x_0">in, 18, ap_none, x_0, pointer</column>
+<column name="x_1">in, 18, ap_none, x_1, pointer</column>
+<column name="x_2">in, 18, ap_none, x_2, pointer</column>
+<column name="x_3">in, 18, ap_none, x_3, pointer</column>
+<column name="x_4">in, 18, ap_none, x_4, pointer</column>
+<column name="x_5">in, 18, ap_none, x_5, pointer</column>
+<column name="x_6">in, 18, ap_none, x_6, pointer</column>
+<column name="x_7">in, 18, ap_none, x_7, pointer</column>
+<column name="x_8">in, 18, ap_none, x_8, pointer</column>
+<column name="x_9">in, 18, ap_none, x_9, pointer</column>
+<column name="x_10">in, 18, ap_none, x_10, pointer</column>
+<column name="x_11">in, 18, ap_none, x_11, pointer</column>
+<column name="x_12">in, 18, ap_none, x_12, pointer</column>
+<column name="x_13">in, 18, ap_none, x_13, pointer</column>
+<column name="x_14">in, 18, ap_none, x_14, pointer</column>
+<column name="x_15">in, 18, ap_none, x_15, pointer</column>
+<column name="x_16">in, 18, ap_none, x_16, pointer</column>
+<column name="x_17">in, 18, ap_none, x_17, pointer</column>
+<column name="x_18">in, 18, ap_none, x_18, pointer</column>
+<column name="x_19">in, 18, ap_none, x_19, pointer</column>
+<column name="x_20">in, 18, ap_none, x_20, pointer</column>
+<column name="x_21">in, 18, ap_none, x_21, pointer</column>
+<column name="x_22">in, 18, ap_none, x_22, pointer</column>
+<column name="x_23">in, 18, ap_none, x_23, pointer</column>
+<column name="x_24">in, 18, ap_none, x_24, pointer</column>
+<column name="x_25">in, 18, ap_none, x_25, pointer</column>
+<column name="x_26">in, 18, ap_none, x_26, pointer</column>
+<column name="x_27">in, 18, ap_none, x_27, pointer</column>
+<column name="x_28">in, 18, ap_none, x_28, pointer</column>
+<column name="x_29">in, 18, ap_none, x_29, pointer</column>
+<column name="x_30">in, 18, ap_none, x_30, pointer</column>
+<column name="x_31">in, 18, ap_none, x_31, pointer</column>
+<column name="x_32">in, 18, ap_none, x_32, pointer</column>
+<column name="x_33">in, 18, ap_none, x_33, pointer</column>
+<column name="x_34">in, 18, ap_none, x_34, pointer</column>
+<column name="x_35">in, 18, ap_none, x_35, pointer</column>
+<column name="x_36">in, 18, ap_none, x_36, pointer</column>
+<column name="x_37">in, 18, ap_none, x_37, pointer</column>
+<column name="x_38">in, 18, ap_none, x_38, pointer</column>
+<column name="x_39">in, 18, ap_none, x_39, pointer</column>
+<column name="x_40">in, 18, ap_none, x_40, pointer</column>
+<column name="x_41">in, 18, ap_none, x_41, pointer</column>
+<column name="x_42">in, 18, ap_none, x_42, pointer</column>
+<column name="x_43">in, 18, ap_none, x_43, pointer</column>
+<column name="x_44">in, 18, ap_none, x_44, pointer</column>
+<column name="x_45">in, 18, ap_none, x_45, pointer</column>
+<column name="x_46">in, 18, ap_none, x_46, pointer</column>
+<column name="x_47">in, 18, ap_none, x_47, pointer</column>
+<column name="x_48">in, 18, ap_none, x_48, pointer</column>
+<column name="x_49">in, 18, ap_none, x_49, pointer</column>
+<column name="x_50">in, 18, ap_none, x_50, pointer</column>
+<column name="x_51">in, 18, ap_none, x_51, pointer</column>
+<column name="x_52">in, 18, ap_none, x_52, pointer</column>
+<column name="score_0">out, 18, ap_vld, score_0, pointer</column>
+<column name="score_0_ap_vld">out, 1, ap_vld, score_0, pointer</column>
+<column name="score_1">out, 18, ap_vld, score_1, pointer</column>
+<column name="score_1_ap_vld">out, 1, ap_vld, score_1, pointer</column>
+<column name="score_2">out, 18, ap_vld, score_2, pointer</column>
+<column name="score_2_ap_vld">out, 1, ap_vld, score_2, pointer</column>
+<column name="score_3">out, 18, ap_vld, score_3, pointer</column>
+<column name="score_3_ap_vld">out, 1, ap_vld, score_3, pointer</column>
+<column name="score_4">out, 18, ap_vld, score_4, pointer</column>
+<column name="score_4_ap_vld">out, 1, ap_vld, score_4, pointer</column>
+</table>
+</item>
+</section>
+</profile>

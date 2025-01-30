@@ -1,0 +1,41 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Thu Jan 23 13:53:19 2025
+# Process ID: 1091316
+# Current directory: /home/hep/lr1424/hls4ml-tutorial/model_5_pynq
+# Command line: vivado -mode batch -source build_bit.tcl
+# Log file: /home/hep/lr1424/hls4ml-tutorial/model_5_pynq/vivado.log
+# Journal file: /home/hep/lr1424/hls4ml-tutorial/model_5_pynq/vivado.jou
+# Running On        :lxfw00.hep.ph.ic.ac.uk
+# Platform          :RockyLinux
+# Operating System  :Rocky Linux 9.5 (Blue Onyx)
+# Processor Detail  :Intel(R) Xeon(R) Gold 5122 CPU @ 3.60GHz
+# CPU Frequency     :3700.010 MHz
+# CPU Physical cores:4
+# CPU Logical cores :4
+# Host memory       :200636 MB
+# Swap memory       :4294 MB
+# Total Virtual     :204931 MB
+# Available Virtual :192657 MB
+#-----------------------------------------------------------
+source build_bit.tcl
+# set tcldir [file dirname [info script]]
+# source [file join $tcldir accelerator_parameters.tcl]
+## set prj_name conifer_jettag
+## set part xc7z020clg400-1
+## set board_part tul.com.tw:pynq-z2:part0:1.0
+## set processing_system_ip xilinx.com:ip:processing_system7:5.5
+## set processing_system processing_system7
+## set ps_s_axi_port S_AXI_HP0
+## set ps_m_axi_port M_AXI_GP0
+## set top conifer_jettag_accelerator
+## set ip_name conifer_conifer_jettag
+## set version 1.5
+# create_project project_1 ${prj_name}_vivado -part ${part} -force
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1440.645 ; gain = 17.867 ; free physical = 163781 ; free virtual = 183303
+# set_property board_part ${board_part} [current_project]
+ERROR: [Board 49-71] The board_part definition was not found for tul.com.tw:pynq-z2:part0:1.0. The project's board_part property was not set, but the project's part property was set to xc7z020clg400-1. Valid board_part values can be retrieved with the 'get_board_parts' Tcl command. Check if board.repoPaths parameter is set and the board_part is installed from the tcl app store.
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 23 13:53:29 2025...

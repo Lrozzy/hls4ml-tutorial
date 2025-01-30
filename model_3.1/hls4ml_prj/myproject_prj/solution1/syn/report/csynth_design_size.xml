@@ -1,0 +1,96 @@
+<design_size title="Design Size Report">
+    <item name="Total Instructions per Compilation Phase">
+        <table>
+            <keys size="4">Phase, Step, Instructions, Description</keys>
+            <column name="Compile/Link">,  18144, After all functions are compiled and linked into a single design</column>
+            <column name="">, , </column>
+            <column name="Unroll/Inline">, , After user unroll and inline pragmas are applied</column>
+            <column name="">(1) unroll, 367463 *, user unroll pragmas are applied</column>
+            <column name="">(2) simplification, 106514 *, simplification of applied user unroll pragmas</column>
+            <column name="">(3) inline, 106010 *, user inline pragmas are applied</column>
+            <column name="">(4) simplification, 105603 *, simplification of applied user inline pragmas</column>
+            <column name="">, , </column>
+            <column name="Array/Struct">, , After user array partition and struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(1) array partition,  65052, user array partition pragmas are applied</column>
+            <column name="">(2) simplification,  28206, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
+            <column name="">(3) aggregate/disaggregate ,  28206, user struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(4) array reshape,  19777, apply array reshape pragmas</column>
+            <column name="">(5) access patterns,  19621, array access pattern optmizations</column>
+            <column name="">, , </column>
+            <column name="Performance">, , After transformations are applied to meet performance pragma targets</column>
+            <column name="">(1) loop simplification,  14470, loop and instruction simplification</column>
+            <column name="">(2) parallelization,   9382, loops are unrolled or pipelined to meet performance targets</column>
+            <column name="">(3) array partition,   9188, arrays are partitioned to meet performance targets</column>
+            <column name="">(4) simplification,   9188, simplification of design after performance transformations</column>
+            <column name="">, , </column>
+            <column name="HW Transforms">, , After hardware transfomations</column>
+            <column name="">(1) lowering,   9194, initial conversion to HW specific instructions</column>
+            <column name="">(2) optimizations,   9203, high level synthesis optimizations</column>
+        </table>
+    </item>
+    <item name="Instructions per Function for each Compilation Phase">
+        <hiertable>
+            <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
+            <rows>
+                <row id="0" col0="myproject" col1="myproject.cpp:7" col2="18144" col3="105603" col3_note="*" col4="19621" col5="9188" col6="9203">
+                    <row id="6" col0="h_quantize&lt;ap_fixed&lt;16, 13, AP_TRN, AP_WRAP, 0&gt;, ap_fixed&lt;15, 13, AP_TRN, AP_WRAP, 0&gt; &gt;" col1="nnet_code_gen.h:27" col2="5433" col3="" col4="" col5="" col6=""/>
+                    <row id="4" col0="dense&lt;ap_fixed&lt;15, 13, AP_TRN, AP_WRAP, 0&gt;, ap_fixed&lt;16, 14, AP_TRN, AP_WRAP, 0&gt;, config3&gt;" col1="nnet_dense.h:41" col2="586" col3="" col4="" col5="" col6="">
+                        <row id="19" col0="dense" col1="nnet_dense.h:50" col2="584" col3="" col4="" col5="" col6="">
+                            <row id="12" col0="dense_latency&lt;ap_fixed&lt;15, 13, AP_TRN, AP_WRAP, 0&gt;, ap_fixed&lt;16, 14, AP_TRN, AP_WRAP, 0&gt;, config3&gt;" col1="nnet_dense_latency.h:13" col2="582" col3="" col4="" col5="" col6="">
+                                <row id="9" col0="product" col1="nnet_mult.h:70" col2="141" col3="" col4="" col5="" col6=""/>
+                                <row id="30" col0="cast&lt;ap_fixed&lt;15, 13, AP_TRN, AP_WRAP, 0&gt;, ap_fixed&lt;16, 14, AP_TRN, AP_WRAP, 0&gt;, config3&gt;" col1="nnet_mult.h:110" col2="60" col3="" col4="" col5="" col6=""/>
+                            </row>
+                        </row>
+                    </row>
+                    <row id="2" col0="relu&lt;ap_fixed&lt;16, 14, AP_TRN, AP_WRAP, 0&gt;, ap_ufixed&lt;12, 12, AP_TRN, AP_WRAP, 0&gt;, ReLU_config6&gt;" col1="nnet_activation.h:39" col2="233" col3="703" col4="577" col5="513" col6="514"/>
+                    <row id="23" col0="h_dense_relu_quantizer&lt;ap_ufixed&lt;12, 12, AP_TRN, AP_WRAP, 0&gt;, ap_ufixed&lt;12, 12, AP_TRN, AP_WRAP, 0&gt; &gt;" col1="nnet_code_gen.h:86" col2="4389" col3="" col4="" col5="" col6=""/>
+                    <row id="24" col0="dense&lt;ap_ufixed&lt;12, 12, AP_TRN, AP_WRAP, 0&gt;, ap_fixed&lt;15, 14, AP_TRN, AP_WRAP, 0&gt;, config8&gt;" col1="nnet_dense.h:41" col2="586" col3="" col4="" col5="" col6="">
+                        <row id="19" col0="dense" col1="nnet_dense.h:50" col2="584" col3="" col4="" col5="" col6="">
+                            <row id="27" col0="dense_latency&lt;ap_ufixed&lt;12, 12, AP_TRN, AP_WRAP, 0&gt;, ap_fixed&lt;15, 14, AP_TRN, AP_WRAP, 0&gt;, config8&gt;" col1="nnet_dense_latency.h:13" col2="582" col3="" col4="" col5="" col6="">
+                                <row id="9" col0="product" col1="nnet_mult.h:70" col2="141" col3="" col4="" col5="" col6=""/>
+                                <row id="13" col0="cast&lt;ap_ufixed&lt;12, 12, AP_TRN, AP_WRAP, 0&gt;, ap_fixed&lt;15, 14, AP_TRN, AP_WRAP, 0&gt;, config8&gt;" col1="nnet_mult.h:110" col2="60" col3="" col4="" col5="" col6=""/>
+                            </row>
+                        </row>
+                    </row>
+                    <row id="26" col0="relu&lt;ap_fixed&lt;15, 14, AP_TRN, AP_WRAP, 0&gt;, ap_ufixed&lt;13, 12, AP_TRN, AP_WRAP, 0&gt;, ReLU_config11&gt;" col1="nnet_activation.h:39" col2="229" col3="319" col4="257" col5="225" col6="226"/>
+                    <row id="25" col0="h_dense_1_relu_quantizer&lt;ap_ufixed&lt;13, 12, AP_TRN, AP_WRAP, 0&gt;, ap_ufixed&lt;13, 12, AP_TRN, AP_WRAP, 0&gt; &gt;" col1="nnet_code_gen.h:156" col2="2359" col3="" col4="" col5="" col6=""/>
+                    <row id="21" col0="dense&lt;ap_ufixed&lt;13, 12, AP_TRN, AP_WRAP, 0&gt;, ap_fixed&lt;17, 15, AP_TRN, AP_WRAP, 0&gt;, config13&gt;" col1="nnet_dense.h:41" col2="534" col3="" col4="" col5="" col6="">
+                        <row id="19" col0="dense" col1="nnet_dense.h:50" col2="532" col3="" col4="" col5="" col6="">
+                            <row id="22" col0="dense_latency&lt;ap_ufixed&lt;13, 12, AP_TRN, AP_WRAP, 0&gt;, ap_fixed&lt;17, 15, AP_TRN, AP_WRAP, 0&gt;, config13&gt;" col1="nnet_dense_latency.h:13" col2="530" col3="" col4="" col5="" col6="">
+                                <row id="9" col0="product" col1="nnet_mult.h:70" col2="141" col3="" col4="" col5="" col6=""/>
+                                <row id="3" col0="cast&lt;ap_ufixed&lt;13, 12, AP_TRN, AP_WRAP, 0&gt;, ap_fixed&lt;17, 15, AP_TRN, AP_WRAP, 0&gt;, config13&gt;" col1="nnet_mult.h:110" col2="60" col3="" col4="" col5="" col6=""/>
+                            </row>
+                        </row>
+                    </row>
+                    <row id="20" col0="relu&lt;ap_fixed&lt;17, 15, AP_TRN, AP_WRAP, 0&gt;, ap_ufixed&lt;13, 11, AP_TRN, AP_WRAP, 0&gt;, ReLU_config16&gt;" col1="nnet_activation.h:39" col2="229" col3="319" col4="257" col5="225" col6="226"/>
+                    <row id="15" col0="h_dense_2_relu_quantizer&lt;ap_ufixed&lt;13, 11, AP_TRN, AP_WRAP, 0&gt;, ap_ufixed&lt;13, 11, AP_TRN, AP_WRAP, 0&gt; &gt;" col1="nnet_code_gen.h:194" col2="2334" col3="" col4="" col5="" col6=""/>
+                    <row id="17" col0="dense&lt;ap_ufixed&lt;13, 11, AP_TRN, AP_WRAP, 0&gt;, ap_fixed&lt;14, 10, AP_TRN, AP_WRAP, 0&gt;, config18&gt;" col1="nnet_dense.h:41" col2="586" col3="" col4="" col5="" col6="">
+                        <row id="19" col0="dense" col1="nnet_dense.h:50" col2="584" col3="" col4="" col5="" col6="">
+                            <row id="8" col0="dense_latency&lt;ap_ufixed&lt;13, 11, AP_TRN, AP_WRAP, 0&gt;, ap_fixed&lt;14, 10, AP_TRN, AP_WRAP, 0&gt;, config18&gt;" col1="nnet_dense_latency.h:13" col2="582" col3="" col4="" col5="" col6="">
+                                <row id="9" col0="product" col1="nnet_mult.h:70" col2="141" col3="" col4="" col5="" col6=""/>
+                                <row id="1" col0="cast&lt;ap_ufixed&lt;13, 11, AP_TRN, AP_WRAP, 0&gt;, ap_fixed&lt;14, 10, AP_TRN, AP_WRAP, 0&gt;, config18&gt;" col1="nnet_mult.h:110" col2="60" col3="" col4="" col5="" col6=""/>
+                            </row>
+                        </row>
+                    </row>
+                    <row id="5" col0="h_dense_3_quantizer&lt;ap_fixed&lt;14, 10, AP_TRN, AP_WRAP, 0&gt;, ap_fixed&lt;14, 10, AP_TRN, AP_WRAP, 0&gt; &gt;" col1="nnet_code_gen.h:232" col2="541" col3="" col4="" col5="" col6=""/>
+                    <row id="12" col0="dense_latency&lt;ap_fixed&lt;15, 13, AP_TRN, AP_WRAP, 0&gt;, ap_fixed&lt;16, 14, AP_TRN, AP_WRAP, 0&gt;, config3&gt;" col1="nnet_dense_latency.h:13" col2="" col3="52533" col4="6836" col5="3956" col6="3957">
+                        <row id="30" col0="cast&lt;ap_fixed&lt;15, 13, AP_TRN, AP_WRAP, 0&gt;, ap_fixed&lt;16, 14, AP_TRN, AP_WRAP, 0&gt;, config3&gt;" col1="nnet_mult.h:110" col2="" col3="256" col3_disp="   256 (64 calls)" col4="256" col4_disp="  256 (64 calls)" col5="" col6=""/>
+                    </row>
+                    <row id="27" col0="dense_latency&lt;ap_ufixed&lt;12, 12, AP_TRN, AP_WRAP, 0&gt;, ap_fixed&lt;15, 14, AP_TRN, AP_WRAP, 0&gt;, config8&gt;" col1="nnet_dense_latency.h:13" col2="" col3="32196" col4="6079" col5="1994" col6="1995"/>
+                    <row id="22" col0="dense_latency&lt;ap_ufixed&lt;13, 12, AP_TRN, AP_WRAP, 0&gt;, ap_fixed&lt;17, 15, AP_TRN, AP_WRAP, 0&gt;, config13&gt;" col1="nnet_dense_latency.h:13" col2="" col3="16152" col4="3430" col5="1186" col6="1187"/>
+                    <row id="8" col0="dense_latency&lt;ap_ufixed&lt;13, 11, AP_TRN, AP_WRAP, 0&gt;, ap_fixed&lt;14, 10, AP_TRN, AP_WRAP, 0&gt;, config18&gt;" col1="nnet_dense_latency.h:13" col2="" col3="2478" col4="1171" col5="245" col6="246"/>
+                </row>
+            </rows>
+            <notes>
+                <note name="*" desc="Exceeded design size warning message threshold"/>
+            </notes>
+        </hiertable>
+    </item>
+    <item name="Design Size Message Settings">
+        <table>
+            <keys size="3">Message Setting, Value, Description</keys>
+            <column name="config_compile -design_size_maximum_warning">100000, Show a warning when total design instructions exceeds this value</column>
+        </table>
+    </item>
+</design_size>
+

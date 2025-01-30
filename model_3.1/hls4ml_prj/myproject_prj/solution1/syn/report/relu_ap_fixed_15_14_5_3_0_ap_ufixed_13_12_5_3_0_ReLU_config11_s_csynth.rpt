@@ -1,0 +1,141 @@
+
+
+================================================================
+== Vitis HLS Report for 'relu_ap_fixed_15_14_5_3_0_ap_ufixed_13_12_5_3_0_ReLU_config11_s'
+================================================================
+* Date:           Thu Jan 23 14:07:36 2025
+
+* Version:        2024.1 (Build 5069499 on May 21 2024)
+* Project:        myproject_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu250-figd2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  1.095 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|      280|     -|
+|FIFO                 |        -|      -|        -|        -|     -|
+|Instance             |        -|      -|        -|        -|     -|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        -|        -|     -|
+|Register             |        -|      -|        -|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |        0|      0|        0|      280|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     1344|   3072|   864000|   432000|   320|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |        0|      0|        0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     5376|  12288|  3456000|  1728000|  1280|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        0|      0|        0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name      | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------+----------+----+---+----+------------+------------+
+    |icmp_ln45_20_fu_98_p2     |      icmp|   0|  0|  22|          15|           1|
+    |icmp_ln45_21_fu_116_p2    |      icmp|   0|  0|  22|          15|           1|
+    |icmp_ln45_22_fu_134_p2    |      icmp|   0|  0|  22|          15|           1|
+    |icmp_ln45_23_fu_152_p2    |      icmp|   0|  0|  22|          15|           1|
+    |icmp_ln45_24_fu_170_p2    |      icmp|   0|  0|  22|          15|           1|
+    |icmp_ln45_25_fu_188_p2    |      icmp|   0|  0|  22|          15|           1|
+    |icmp_ln45_26_fu_206_p2    |      icmp|   0|  0|  22|          15|           1|
+    |icmp_ln45_fu_80_p2        |      icmp|   0|  0|  22|          15|           1|
+    |select_ln45_10_fu_162_p3  |    select|   0|  0|  13|           1|          13|
+    |select_ln45_11_fu_180_p3  |    select|   0|  0|  13|           1|          13|
+    |select_ln45_12_fu_198_p3  |    select|   0|  0|  13|           1|          13|
+    |select_ln45_13_fu_216_p3  |    select|   0|  0|  13|           1|          13|
+    |select_ln45_7_fu_108_p3   |    select|   0|  0|  13|           1|          13|
+    |select_ln45_8_fu_126_p3   |    select|   0|  0|  13|           1|          13|
+    |select_ln45_9_fu_144_p3   |    select|   0|  0|  13|           1|          13|
+    |select_ln45_fu_90_p3      |    select|   0|  0|  13|           1|          13|
+    +--------------------------+----------+----+---+----+------------+------------+
+    |Total                     |          |   0|  0| 280|         128|         112|
+    +--------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------+-----+-----+------------+----------------------------------------------------------------------------+--------------+
+|  RTL Ports  | Dir | Bits|  Protocol  |                                Source Object                               |    C Type    |
++-------------+-----+-----+------------+----------------------------------------------------------------------------+--------------+
+|ap_ready     |  out|    1|  ap_ctrl_hs|  relu<ap_fixed<15, 14, 5, 3, 0>, ap_ufixed<13, 12, 5, 3, 0>, ReLU_config11>|  return value|
+|ap_return_0  |  out|   13|  ap_ctrl_hs|  relu<ap_fixed<15, 14, 5, 3, 0>, ap_ufixed<13, 12, 5, 3, 0>, ReLU_config11>|  return value|
+|ap_return_1  |  out|   13|  ap_ctrl_hs|  relu<ap_fixed<15, 14, 5, 3, 0>, ap_ufixed<13, 12, 5, 3, 0>, ReLU_config11>|  return value|
+|ap_return_2  |  out|   13|  ap_ctrl_hs|  relu<ap_fixed<15, 14, 5, 3, 0>, ap_ufixed<13, 12, 5, 3, 0>, ReLU_config11>|  return value|
+|ap_return_3  |  out|   13|  ap_ctrl_hs|  relu<ap_fixed<15, 14, 5, 3, 0>, ap_ufixed<13, 12, 5, 3, 0>, ReLU_config11>|  return value|
+|ap_return_4  |  out|   13|  ap_ctrl_hs|  relu<ap_fixed<15, 14, 5, 3, 0>, ap_ufixed<13, 12, 5, 3, 0>, ReLU_config11>|  return value|
+|ap_return_5  |  out|   13|  ap_ctrl_hs|  relu<ap_fixed<15, 14, 5, 3, 0>, ap_ufixed<13, 12, 5, 3, 0>, ReLU_config11>|  return value|
+|ap_return_6  |  out|   13|  ap_ctrl_hs|  relu<ap_fixed<15, 14, 5, 3, 0>, ap_ufixed<13, 12, 5, 3, 0>, ReLU_config11>|  return value|
+|ap_return_7  |  out|   13|  ap_ctrl_hs|  relu<ap_fixed<15, 14, 5, 3, 0>, ap_ufixed<13, 12, 5, 3, 0>, ReLU_config11>|  return value|
+|ap_rst       |   in|    1|  ap_ctrl_hs|  relu<ap_fixed<15, 14, 5, 3, 0>, ap_ufixed<13, 12, 5, 3, 0>, ReLU_config11>|  return value|
+|data_1_val   |   in|   15|     ap_none|                                                                  data_1_val|        scalar|
+|data_6_val   |   in|   15|     ap_none|                                                                  data_6_val|        scalar|
+|data_9_val   |   in|   15|     ap_none|                                                                  data_9_val|        scalar|
+|data_12_val  |   in|   15|     ap_none|                                                                 data_12_val|        scalar|
+|data_15_val  |   in|   15|     ap_none|                                                                 data_15_val|        scalar|
+|data_21_val  |   in|   15|     ap_none|                                                                 data_21_val|        scalar|
+|data_22_val  |   in|   15|     ap_none|                                                                 data_22_val|        scalar|
+|data_26_val  |   in|   15|     ap_none|                                                                 data_26_val|        scalar|
++-------------+-----+-----+------------+----------------------------------------------------------------------------+--------------+
+

@@ -1,0 +1,20 @@
+Backend: Vitis
+ClockPeriod: 5
+ClockUncertainty: 27%
+HLSConfig:
+  Model:
+    Precision: ap_fixed<16,6>
+    ReuseFactor: 1
+IOType: io_parallel
+InputData: null
+KerasModel: !keras_model '/home/hep/lr1424/hls4ml-tutorial/model_3.1/hls4ml_prj/keras_model.keras'
+OutputDir: /home/hep/lr1424/hls4ml-tutorial/model_3.1/hls4ml_prj
+OutputPredictions: null
+Part: xcu250-figd2104-2L-e
+ProjectName: myproject
+Stamp: 68dad097
+Version: 1.0.0
+WriterConfig:
+  Namespace: null
+  WriteTar: false
+  WriteWeightsTxt: true
